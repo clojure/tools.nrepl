@@ -1,6 +1,16 @@
-(ns cemerick.nrepl-test
+;   Copyright (c) Rich Hickey. All rights reserved.
+;   The use and distribution terms for this software are covered by the
+;   Eclipse Public License 1.0 (http://opensource.org/licenses/eclipse-1.0.php)
+;   which can be found in the file epl-v10.html at the root of this distribution.
+;   By using this software in any fashion, you are agreeing to be bound by
+;   the terms of this license.
+;   You must not remove this notice, or any other, from this software.
+
+(ns #^{:doc ""
+       :author "Chas Emerick"}
+  clojure.tools.nrepl-test
   (:use clojure.test)
-  (:require [cemerick.nrepl :as repl]
+  (:require [clojure.tools.nrepl :as repl]
     [clojure.set :as set]))
 
 (println (format "Testing with Clojure v%s" (clojure-version)))
@@ -94,7 +104,7 @@
     (is (= true (repl-value "(.contains (str *e) \"bad, bad code\")")))))
 
 (def-repl-test auto-print-stack-trace
-  (is (= true (repl-value "(set! cemerick.nrepl/*print-stack-trace-on-error* true)")))
+  (is (= true (repl-value "(set! clojure.tools.nrepl/*print-stack-trace-on-error* true)")))
   (is (.contains (->> (repl "(throw (Exception. \"foo\" (Exception. \"nested exception\")))")
                    repl/response-seq
                    repl/combine-responses
@@ -207,7 +217,7 @@
   (repl/reset-ack-port!)
   (let [server-process (.exec (Runtime/getRuntime)
                          (into-array ["java" "-Dnreplacktest=y" "-cp" (System/getProperty "java.class.path")
-                                      "cemerick.nrepl.main" "--ack" (str *server-port*)]))
+                                      "clojure.tools.nrepl.main" "--ack" (str *server-port*)]))
         acked-port (repl/wait-for-ack 20000)]
     (try
       (is acked-port "Timed out waiting for ack")
@@ -225,7 +235,7 @@
                     (.getLocalPort ss))
         server-process (.exec (Runtime/getRuntime)
                          (into-array ["java" "-Dnreplacktest=y" "-cp" (System/getProperty "java.class.path")
-                                      "cemerick.nrepl.main" "--port" (str free-port) "--ack" (str *server-port*)]))
+                                      "clojure.tools.nrepl.main" "--port" (str free-port) "--ack" (str *server-port*)]))
         acked-port (repl/wait-for-ack 20000)]
     (try
       (is acked-port "Timed out waiting for ack")

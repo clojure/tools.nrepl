@@ -1,4 +1,14 @@
-(ns cemerick.nrepl
+;   Copyright (c) Rich Hickey. All rights reserved.
+;   The use and distribution terms for this software are covered by the
+;   Eclipse Public License 1.0 (http://opensource.org/licenses/eclipse-1.0.php)
+;   which can be found in the file epl-v10.html at the root of this distribution.
+;   By using this software in any fashion, you are agreeing to be bound by
+;   the terms of this license.
+;   You must not remove this notice, or any other, from this software.
+
+(ns #^{:doc ""
+       :author "Chas Emerick"}
+  clojure.tools.nrepl
   (:require clojure.main)
   (:import (java.net ServerSocket)
     clojure.lang.LineNumberingPushbackReader
@@ -88,7 +98,7 @@
                   (ex-fn (root-cause ex))))))))
 
 (def version
-  (when-let [in (-> submit class (.getResourceAsStream "/cemerick/nrepl/version.txt"))]
+  (when-let [in (-> submit class (.getResourceAsStream "/clojure/tools/nrepl/version.txt"))]
     (let [reader (-> in (InputStreamReader. "UTF-8") BufferedReader.)
           string (.readLine reader)]
       (.close reader)
@@ -343,7 +353,7 @@
           (= :interrupt x) ((send-client-message
                               response-promises
                               out
-                              (format "(cemerick.nrepl/interrupt \"%s\")" (:id msg))))
+                              (format "(clojure.tools.nrepl/interrupt \"%s\")" (:id msg))))
           :else (throw (IllegalArgumentException. (str "Invalid argument to REPL response fn: " x))))))))
 
 (defn response-seq
@@ -499,7 +509,7 @@
 (defn- send-ack
   [my-port ack-port]
   (let [connection (connect "localhost" ack-port)]
-    (((:send connection) (format "(deliver @@#'cemerick.nrepl/ack-port-promise %d)" my-port)))))
+    (((:send connection) (format "(deliver @@#'clojure.tools.nrepl/ack-port-promise %d)" my-port)))))
 
 (defn start-server
   ([] (start-server 0))
