@@ -16,6 +16,8 @@
     [clojure.tools.nrepl :as nrepl]
     [clojure.tools.nrepl.helpers :as helpers]))
 
+(use-fixtures :once repl-server-fixture)
+
 (deftest escape-and-string-argument
   (are [string escaped] (= escaped (helpers/escape string))
     "a" "a"
@@ -23,8 +25,6 @@
   (are [string arg] (= arg (helpers/string-argument string))
     "a" "\"a\""
     "\"a" "\"\\\"a\""))
-
-(use-fixtures :once repl-server-fixture)
 
 (def-repl-test load-code-with-debug-info
   (repl-receive "\n\n\n(defn function [])")
