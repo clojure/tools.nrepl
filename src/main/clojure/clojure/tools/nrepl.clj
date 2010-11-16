@@ -9,7 +9,9 @@
 (ns #^{:doc ""
        :author "Chas Emerick"}
   clojure.tools.nrepl
-  (:require clojure.main clojure.tools.nrepl.helpers)
+  (:require clojure.main
+    clojure.stacktrace
+    clojure.tools.nrepl.helpers)
   (:import (java.net ServerSocket)
     clojure.lang.LineNumberingPushbackReader
     java.lang.ref.WeakReference
@@ -21,7 +23,7 @@
       TimeUnit ThreadFactory
       CancellationException ExecutionException TimeoutException)))
 
-(def *print-stack-trace-on-error* false)
+(def *print-detail-on-error* false)
 (def *pretty-print* false)
 
 (def pprint prn)
@@ -47,6 +49,11 @@
     true))
 
 (configure-pprinting)
+
+(def #^{:dynamic true
+        :doc "Function that is used to print REPL exceptions when *print-detail-on-error* is true.
+              Defaults to clojure.stacktrace/print-cause-trace."}
+  *print-error-detail*)
 
 (def #^ExecutorService executor (Executors/newCachedThreadPool
                                   (proxy [ThreadFactory] []
@@ -92,7 +99,6 @@
                                (when-not (or (instance? IOException cause)
                                            (instance? java.lang.InterruptedException cause)
                                            (instance? java.nio.channels.ClosedByInterruptException cause))
-                                 ;(.printStackTrace cause)
                                  (pr-str "submit-looping: exception occured: " cause)))))
   ([function ex-fn]
     (submit (fn []
@@ -150,8 +156,9 @@
    :print-level *print-level*, :compile-path *compile-path*
    :command-line-args *command-line-args*
    :ns (create-ns 'user)
-   :print-stack-trace-on-error *print-stack-trace-on-error*
-   :pretty-print *pretty-print*})
+   :print-detail-on-error *print-detail-on-error*
+   :pretty-print *pretty-print*
+   :print-error-detail clojure.stacktrace/print-cause-trace})
 
 (defmacro #^{:private true} set!-many
   [& body]
@@ -212,14 +219,16 @@
   [client-state]
   (let [{:keys [value-3 value-2 value-1 last-exception ns warn-on-reflection
                 math-context print-meta print-length print-level compile-path
-                command-line-args print-stack-trace-on-error pretty-print]} client-state]
+                command-line-args print-detail-on-error pretty-print
+                print-error-detail]} client-state]
     (in-ns (ns-name ns))
     (set!-many
       *3 value-3
       *2 value-2
       *1 value-1
       *e last-exception
-      *print-stack-trace-on-error* print-stack-trace-on-error
+      *print-detail-on-error* print-detail-on-error
+      *print-error-detail* print-error-detail
       *pretty-print* pretty-print
       *warn-on-reflection* warn-on-reflection
       *math-context* math-context
@@ -237,8 +246,9 @@
     (binding [*in* (LineNumberingPushbackReader. (StringReader. in))
               *out* out
               *err* err
-              *print-stack-trace-on-error* *print-stack-trace-on-error*
+              *print-detail-on-error* *print-detail-on-error*
               *pretty-print* *pretty-print*
+              *print-error-detail* clojure.stacktrace/print-cause-trace
               release-session! (partial release-session! client-state-atom)
               retain-session! (partial retain-session! client-state-atom)]
       (try
@@ -254,8 +264,8 @@
                         (swap! client-state-atom assoc :last-exception e)
                         (write-response :status "error")
                         (binding [*out* *err*]
-                          (if *print-stack-trace-on-error*
-                            (.printStackTrace repl-exception *out*)
+                          (if *print-detail-on-error*
+                            (*print-error-detail* repl-exception)
                             (prn repl-exception))
                           (flush)))))
           :prompt (fn [])
@@ -266,7 +276,8 @@
                      :value-2 *1
                      :value-1 value
                      :ns *ns*
-                     :print-stack-trace-on-error *print-stack-trace-on-error*
+                     :print-detail-on-error *print-detail-on-error*
+                     :print-error-detail *print-error-detail*
                      :pretty-print *pretty-print*)
                    (write-response :value (with-out-str
                                             (if (pretty-print?)
@@ -550,8 +561,6 @@
 
 ;; TODO
 ;; - core
-;;   - instead of using .printStackTrace when *print-stack-trace-on-error*,
-;;     invoke a session-retained set!-able fn; easy place to swap in clj-stacktrace, etc
 ;;   - ensure init-client-state includes all defaults set by main/with-bindings
 ;;   - add support for clojure 1.3.0 (var changes being the big issue there)
 ;;   - include :ns in responses only alongside :value and [:status "done"]
