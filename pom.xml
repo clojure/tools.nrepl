@@ -56,7 +56,6 @@
                     </pomIncludes>
                     <streamLogs>true</streamLogs>
                     <goals><goal>clojure:test</goal></goals>
-                    <mavenOpts>-Duser.dir=${basedir}</mavenOpts>
                 </configuration>
                 <executions>
                     <execution>
