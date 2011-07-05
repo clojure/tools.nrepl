@@ -1,0 +1,288 @@
+<html>
+  <head>
+    <title>clojure.tools.nrepl - Network REPL 0.0.6 API documentation</title>
+    <link href="static/favicon.png" rel="icon" />
+    <link href="static/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the source by the clojure autodoc system.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
+	<h1><a title="page header title" id="page-header" href="index.html">Network REPL</a></h1>
+      </div>
+      <div id="leftcolumn"><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <span class="toc-header"><span id="project-name">Network REPL</span> <span id="version">0.0.6</span> API</span><br />
+    <ul>
+      <li><a class="wiki_link" href="index.html">Overview</a></li>
+      <li><a class="wiki_link" href="api-index.html">API Index</a></li>
+    </ul>
+    
+    
+    <a href="http://clojure.org" class="wiki_link">Clojure Home</a>
+  </div>
+</div>
+</div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div id="content_view" class="wiki wikiPage">
+                <div id="right-sidebar"><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="#toc0">Overview</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.nrepl/*print-error-detail*">*print-error-detail*</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.nrepl/combine-responses">combine-responses</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.nrepl/connect">connect</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.nrepl/read-response-value">read-response-value</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.nrepl/release-session!">release-session!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.nrepl/response-seq">response-seq</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.nrepl/retain-session!">retain-session!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.nrepl/send-with">send-with</a>
+    </div>
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.cmdline">clojure.tools.nrepl.cmdline</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.helpers">clojure.tools.nrepl.helpers</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.nrepl.helpers/load-file-command">load-file-command</a>
+    </div>
+    <br />
+  </div>
+</div>
+</div>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">clojure.tools.nrepl</span>
+  - <span id="header-project">Network REPL</span> <span id="header-version">0.0.6</span> (<span id="header-status">in development</span>)
+  </h1>
+<span id="author-line">by <span id="author-name">Chas Emerick</span><br /></span>
+<br />Full namespace name: <span id="long-name">clojure.tools.nrepl</span>
+<p></p>
+<h2>Overview</h2>
+<pre id="namespace-docstr"></pre>
+
+
+<br />
+<h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.nrepl/*print-error-detail*">*print-error-detail*</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Function that is used to print REPL exceptions when *print-detail-on-error* is true.
+Defaults to clojure.stacktrace/print-cause-trace.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.nrepl/blob/b2267071210b83c37bb8d03f4992bc587a7e2c01/src/main/clojure/clojure/tools/nrepl.clj#L54" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.nrepl/combine-responses">combine-responses</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (combine-responses responses)
+</pre>
+  <pre id="var-docstr">Combines the provided response messages into a single response map.
+Typical usage being:
+
+    (combine-responses (repl-response-seq ((:send connection) "(some-expression)")))
+
+Certain message slots are combined in special ways:
+
+  - only the second :ns (last in a reduction) is retained
+  - :value is accumulated into an ordered collection
+  - :status is accumulated into a set
+  - string values (associated with e.g. :out and :err) are concatenated</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.nrepl/blob/b2267071210b83c37bb8d03f4992bc587a7e2c01/src/main/clojure/clojure/tools/nrepl.clj#L387" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.nrepl/connect">connect</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (connect port)
+       (connect host port)
+</pre>
+  <pre id="var-docstr">Connects to a hosted REPL at the given host (defaults to localhost) and port,
+returning a map containing two functions:
+
+- send: a function that takes at least one argument (a code string
+        to be evaluated) and optional kwargs:
+        :timeout - number in milliseconds specifying the maximum runtime of
+                   accompanying code (default: no limit)
+        (send ...) returns a response function, described below.
+- close: no-arg function that closes the underlying socket
+
+Note that the connection/map object also implements java.io.Closeable,
+and is therefore usable with with-open.
+
+Response functions, returned from invocations of (send ...), accept zero or
+one argument. The one-arg arity accepts either:
+    - a number of milliseconds, which is the maximum time that the invocation will block
+      before returning the next response message.  If the timeout is exceeded, nil
+      is returned.  Multiple response messages are expected for each sent request; a
+      response message with a :status of "done" indicates that the associated request
+      has been fully processed, and that no further response messages should be expected.
+      See response-seq and combine-responses for some utilities for consuming message
+      responses.
+    - the :interrupt keyword. This sends an interrupt message for the request
+      associated with the response function, and blocks for default-timeout milliseconds
+      for confirmation of the interrupt.
+
+The 0-arg response function arity is the same as invoking (receive-fn default-timeout).</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.nrepl/blob/b2267071210b83c37bb8d03f4992bc587a7e2c01/src/main/clojure/clojure/tools/nrepl.clj#L442" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.nrepl/read-response-value">read-response-value</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (read-response-value response-message)
+</pre>
+  <pre id="var-docstr">Returns the provided response message, replacing its :value string with
+the result of (read)ing it.  Returns the message unchanged if the :value
+slot is empty.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.nrepl/blob/b2267071210b83c37bb8d03f4992bc587a7e2c01/src/main/clojure/clojure/tools/nrepl.clj#L334" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.nrepl/release-session!">release-session!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (release-session! client-state-atom)
+</pre>
+  <pre id="var-docstr">Releases the current session, indicating that it will not be requested
+again.  Returns true iff the session had been previously retained.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.nrepl/blob/b2267071210b83c37bb8d03f4992bc587a7e2c01/src/main/clojure/clojure/tools/nrepl.clj#L196" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.nrepl/response-seq">response-seq</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (response-seq response-fn)
+       (response-seq response-fn timeout)
+</pre>
+  <pre id="var-docstr">Returns a lazy seq of the responses available through repeated invocations
+of the provided response function.  An optional timeout value can be provided,
+which will be passed along to the response function on each invocation.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.nrepl/blob/b2267071210b83c37bb8d03f4992bc587a7e2c01/src/main/clojure/clojure/tools/nrepl.clj#L364" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.nrepl/retain-session!">retain-session!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (retain-session! client-state-atom)
+</pre>
+  <pre id="var-docstr">Retains the current repl session, returning the opaque string ID it
+is associated with.  This only needs to be done once per session to
+maintain its retention.  Other connections must specify a session-id
+in order to use the corresponding session.
+
+Please use release-session when you're done with one, or it'll never
+get GC'd.  This is an implementation detail; future versions of nrepl
+may institute some kind of reasonable session expiration policy.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.nrepl/blob/b2267071210b83c37bb8d03f4992bc587a7e2c01/src/main/clojure/clojure/tools/nrepl.clj#L180" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.nrepl/send-with">send-with</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (send-with connection &amp; body)
+</pre>
+  <pre id="var-docstr">Sends the body of code using the provided connection (literally! No
+interpolation/quasiquoting of locals or other references is performed),
+returning a REPL response function.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.nrepl/blob/b2267071210b83c37bb8d03f4992bc587a7e2c01/src/main/clojure/clojure/tools/nrepl.clj#L429" id="var-source">Source</a>
+</div>
+<h2 id="namespace-name">clojure.tools.nrepl.cmdline</h2>
+<pre id="namespace-docstr"></pre>
+
+
+<br />
+
+<h2 id="namespace-name">clojure.tools.nrepl.helpers</h2>
+<pre id="namespace-docstr"></pre>
+
+
+<br />
+<div id="var-entry">
+  <hr />
+  <h2 id="clojure.tools.nrepl.helpers/load-file-command">load-file-command</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (load-file-command f)
+       (load-file-command f source-root)
+       (load-file-command code file-path file-name)
+</pre>
+  <pre id="var-docstr">Returns a string expression that can be sent to an nREPL session to
+load the code in given local file in the remote REPL's environment,
+preserving debug information (e.g. line numbers, etc).
+
+Typical usage: ((:send connection)
+                 (load-file-command (java.io.File. "/path/to/clojure/file.clj")))
+
+If appropriate, the source path from which the code is being loaded may
+be provided as well (suitably trimming the file's path to a relative one
+when loaded).
+
+The 3-arg variation of this function expects the full source of the file to be loaded,
+the source-root-relative path of the source file, and the name of the file.  e.g.:
+
+  (load-file-command "…code here…" "some/ns/name/file.clj" "file.clj")</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.nrepl/blob/b2267071210b83c37bb8d03f4992bc587a7e2c01/src/main/clojure/clojure/tools/nrepl/helpers.clj#L14" id="var-source">Source</a>
+</div>
+
+
+</div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;" id="copyright">No copyright info </div>
+	</div>
+      </div>
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
+      Clojure auto-documentation system by Tom Faulhaber.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
+</html>
