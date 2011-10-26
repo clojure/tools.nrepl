@@ -177,9 +177,20 @@ in the provided nREPL client.
 - `code` The code to be evaluated.
 - `in` A string containing content to be bound (via a Reader) to `*in*` for the duration
 of `code`'s execution
-- `timeout` The maximum amount of time, in milliseconds, that the provided code will be
-allowed to run before a `timeout` response is sent.  This is optional; if not provided,
+- `timeout` (optional) The maximum amount of time, in milliseconds, that the provided code will be
+allowed to run before a `timeout` response is sent.  If not provided,
 a default timeout will be assigned by the server (currently always 60s).
+- `accept` (optional, *experimental*) The data type(s) that the client would like to receive back as
+"rendering(s)" of the value of `code`.  Each type is provided as a string,
+e.g. "jpg" or "txt"; if multiple data types are acceptable, then multiple `accept` pairs
+should be sent in the message.  Each type should correspond to a different
+rendering implementation registered with or provided by the nREPL server; if the value
+obtained from evaluating `code` has a rendering implementation matching any of the types in
+`accept`, a response message will be sent that contains a `rendered-XXX` slot, where `XXX` is
+the type in question.  e.g. if `code` will return a graph data structure, then including
+"jpg" in `accept` might result in a `rendered-jpg` slot message being returned with image data.
+Including "txt" in `accept` might result in a `rendered-txt` slot message being returned
+with an ASCII art representation of the graph data structure. 
 
 Only `id` and `code` are required in every request.
 
@@ -208,6 +219,15 @@ the time of printing, a pretty-printer will be used instead:
         2. Clojure Contrib (and therefore `clojure.contrib.pprint`)
     2. `clojure.tools.nrepl/*pretty-print*` is `set!`'ed to true (which persists for the
 duration of the client connection)
+- `rendered-<datatype>` (optional, *experimental*) If the corresponding request contained
+data type(s) in its `accept` slot, and the value of the evaluated code sent could be rendered
+into the specified data type, then `rendered-<datatype>` will contain the Base64-encoded
+binary representation of that datatype.  e.g. if the request's `accept` slot included "png",
+and an implementation existed to produce an image rendering of the request's `code`'s value,
+then a response message will be sent with a `rendered-png` slot containing Base64-encoded
+image data.  The details of the data returned via messages containing `rendered-<datatype>`
+slots is defined solely by the rendering implementations provided by or registered with
+the nREPL server.
 - `status` One of:
     - `error` Indicates an error occurred evaluating the requested code.  The related
 exception is bound to `*e` per usual, and printed to `*err*`, which will be delivered

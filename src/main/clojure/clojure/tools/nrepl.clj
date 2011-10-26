@@ -11,8 +11,8 @@
   clojure.tools.nrepl
   (:require clojure.main
     clojure.stacktrace
-    clojure.tools.nrepl.helpers
-    clojure.test)
+    clojure.test
+    [clojure.tools.nrepl.response :as response])
   (:import (java.net ServerSocket)
     (clojure.lang Var LineNumberingPushbackReader)
     java.lang.ref.WeakReference
@@ -135,6 +135,12 @@
   [v]
   (if (or (coll? v) (instance? java.util.Collection v)) v [v]))
 
+(defn- message-entry-count
+  [msg]
+  (apply + (for [[k v] msg
+                 v (as-collection v)]
+             1)))
+
 ;See the README for message format
 ;
 ;Not simply printing and reading maps because the client
@@ -146,7 +152,7 @@
   (locking out
     (binding [*out* out
               *print-readably* true]
-      (prn (count msg))
+      (prn (message-entry-count msg))
       (doseq [[k v] msg
               v (as-collection v)]
         (prn (if (string? k) k (name k)))
@@ -218,7 +224,7 @@
     true))
 
 (defn- handle-request
-  [client-state-atom write-response {:keys [code in interrupt-atom ns] :or {in ""} :as msg}]
+  [client-state-atom write-response {:keys [code in interrupt-atom ns accept] :or {in ""} :as msg}]
   (let [code-reader (LineNumberingPushbackReader. (StringReader. code))
         out (create-repl-out :out write-response)
         err (create-repl-out :err write-response)]
@@ -265,7 +271,10 @@
                  (write-response :value (with-out-str
                                           (if (pretty-print?)
                                             (pprint value)
-                                            (prn value))))))
+                                            (prn value))))
+                 (when-let [[rendering data-type] (and accept
+                                                       (response/render->base64 value (as-collection accept)))]
+                   (write-response (keyword (str "rendered-" data-type)) rendering))))
       (finally
         (pop-thread-bindings)
         (.flush out)
