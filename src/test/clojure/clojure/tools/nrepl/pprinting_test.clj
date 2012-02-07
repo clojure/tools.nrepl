@@ -6,8 +6,7 @@
 ;   the terms of this license.
 ;   You must not remove this notice, or any other, from this software.
 
-(ns #^{:doc ""
-       :author "Chas Emerick"}
+(ns #^{:author "Chas Emerick"}
   clojure.tools.nrepl.pprinting-test
   (:use [clojure.tools.nrepl-test :only (def-repl-test repl-server-fixture)]
     clojure.test)
@@ -15,6 +14,7 @@
 
 (use-fixtures :once repl-server-fixture)
 
+(comment ; TODO
 (defmacro def-pp-test
   [name & body]
   (when (repl/pretty-print-available?)
@@ -36,4 +36,4 @@
   (is (repl-value "(clojure.tools.nrepl/pretty-print?)"))
   (repl-receive "(set! clojure.tools.nrepl/*pretty-print* false)")
   (is (not (repl-value "clojure.tools.nrepl/*pretty-print*")))
-  (is (not (repl-value "(clojure.tools.nrepl/pretty-print?)"))))
+  (is (not (repl-value "(clojure.tools.nrepl/pretty-print?)")))))

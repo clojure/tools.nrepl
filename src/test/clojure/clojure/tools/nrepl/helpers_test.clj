@@ -6,8 +6,7 @@
 ;   the terms of this license.
 ;   You must not remove this notice, or any other, from this software.
 
-(ns #^{:doc ""
-       :author "Chas Emerick"}
+(ns #^{:author "Chas Emerick"}
   clojure.tools.nrepl.helpers-test
   (:import (java.io File))
   (:use [clojure.tools.nrepl-test :only (def-repl-test repl-server-fixture)]
@@ -16,6 +15,7 @@
     [clojure.tools.nrepl :as nrepl]
     [clojure.tools.nrepl.helpers :as helpers]))
 
+(comment ;TODO
 (def project-base-dir (File. (System/getProperty "nrepl.basedir" ".")))
 
 (use-fixtures :once repl-server-fixture)
@@ -48,3 +48,4 @@
           (-> #'clojure.tools.nrepl.load-file-sample/dfunction
             meta
             (select-keys [:file :line]))))))
+)
