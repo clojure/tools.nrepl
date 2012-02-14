@@ -6,7 +6,7 @@
 ;   the terms of this license.
 ;   You must not remove this notice, or any other, from this software.
 
-(ns #^{:doc ""
+(ns #^{:doc "A proof-of-concept command-line client for nREPL."
        :author "Chas Emerick"}
   clojure.tools.nrepl.cmdline
   (:require [clojure.tools.nrepl :as repl])
