@@ -325,9 +325,7 @@
       (symbol? thing)  :named
       (keyword? thing) :named
       (map? thing)     :map
-      (or (coll? thing)
-          (.isArray (class thing)))
-      :list)))
+      (or (nil? thing) (coll? thing) (.isArray (class thing))) :list)))
 
 ;; The following methods should be pretty straight-forward.
 ;;
