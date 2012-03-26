@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>clojure.tools.nrepl - Network REPL 0.0.6 API documentation</title>
+    <title>clojure.tools.nrepl - Network REPL 0.2.0 API documentation</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -27,7 +27,7 @@ namespace.
       <div id="leftcolumn"><div style="text-align: center;"></div>
 <div class="menu">
   <div class="WikiCustomNav WikiElement wiki">
-    <span class="toc-header"><span id="project-name">Network REPL</span> <span id="version">0.0.6</span> API</span><br />
+    <span class="toc-header"><span id="project-name">Network REPL</span> <span id="version">0.2.0</span> API</span><br />
     <ul>
       <li><a class="wiki_link" href="index.html">Overview</a></li>
       <li><a class="wiki_link" href="api-index.html">API Index</a></li>
@@ -45,55 +45,470 @@ namespace.
                 <div id="right-sidebar"><div id="toc">
   <h1 class="nopad">Table of Contents</h1>
   <div style="margin-left: 1em;" class="toc-section">
-    <a href="#toc0">Overview</a>
+    <a href="#toc0" style="margin-top: 3px;">Overview</a>
     
-    <br />
   </div><div style="margin-left: 1em;" class="toc-section">
-    <a href="#clojure.tools.nrepl.cmdline">clojure.tools.nrepl.cmdline</a>
+    <a href="#" style="margin-top: 3px;"></a>
     
-    <br />
   </div><div style="margin-left: 1em;" class="toc-section">
-    <a href="#clojure.tools.nrepl.helpers">clojure.tools.nrepl.helpers</a>
+    <a href="#" style="margin-top: 3px;"></a>
+    
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#var-section" style="margin-top: 3px;">Vars and Functions</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.tools.nrepl.helpers/load-file-command">load-file-command</a>
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl/client">client</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl/client-session">client-session</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl/code">code</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl/combine-responses">combine-responses</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl/connect">connect</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl/message">message</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl/new-session">new-session</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl/read-response-value">read-response-value</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl/response-seq">response-seq</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl/response-values">response-values</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl/version">version</a>
+      
     </div>
-    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.ack" style="margin-top: 3px;">clojure.tools.nrepl.ack</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.ack/wait-for-ack">wait-for-ack</a>
+      
+    </div>
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.bencode" style="margin-top: 3px;">clojure.tools.nrepl.bencode</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.bencode/read-bencode">read-bencode</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.bencode/read-bencode-netstring">read-bencode-netstring</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.bencode/read-netstring">read-netstring</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.bencode/write-bencode-netstring">write-bencode-netstring</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.bencode/write-netstring">write-netstring</a>
+      
+    </div>
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.cmdline" style="margin-top: 3px;">clojure.tools.nrepl.cmdline</a>
+    
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.helpers" style="margin-top: 3px;">clojure.tools.nrepl.helpers</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.helpers/load-file-command">load-file-command</a>
+      
+    </div>
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.middleware.interruptible-eval" style="margin-top: 3px;">clojure.tools.nrepl.middleware.interruptible-eval</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware.interruptible-eval/*msg*">*msg*</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware.interruptible-eval/evaluate">evaluate</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware.interruptible-eval/interruptible-eval">interruptible-eval</a>
+      
+    </div>
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.middleware.pr-values" style="margin-top: 3px;">clojure.tools.nrepl.middleware.pr-values</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware.pr-values/pr-values">pr-values</a>
+      
+    </div>
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.middleware.session" style="margin-top: 3px;">clojure.tools.nrepl.middleware.session</a>
+    
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.misc" style="margin-top: 3px;">clojure.tools.nrepl.misc</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.misc/response-for">response-for</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.misc/returning">returning</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.misc/uuid">uuid</a>
+      
+    </div>
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.server" style="margin-top: 3px;">clojure.tools.nrepl.server</a>
+    
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.transport" style="margin-top: 3px;">clojure.tools.nrepl.transport</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.transport/Transport">Transport</a>
+      <div style="margin-left: 1em;" class="toc-subentry">
+        <a class="toc-subentry-anchor" href="#clojure.tools.nrepl.transport/recv">recv</a>
+      </div><div style="margin-left: 1em;" class="toc-subentry">
+        <a class="toc-subentry-anchor" href="#clojure.tools.nrepl.transport/send">send</a>
+      </div>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.transport/FnTransport">FnTransport</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.transport/QueueTransport">QueueTransport</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.transport/bencode">bencode</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.transport/fn-transport">fn-transport</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.transport/piped-transports">piped-transports</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.transport/tty">tty</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.transport/tty-greeting">tty-greeting</a>
+      
+    </div>
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">clojure.tools.nrepl</span>
-  - <span id="header-project">Network REPL</span> <span id="header-version">0.0.6</span> (<span id="header-status">in development</span>)
+                <div id="content-tag"><h1 id="overview">API for <span id="clojure.tools.nrepl">clojure.tools.nrepl</span>
+  - <span id="header-project">Network REPL</span> <span id="header-version">0.2.0</span><span id="header-status-block"> (<span id="header-status">in development</span>)</span>
   </h1>
 <span id="author-line">by <span id="author-name">Chas Emerick</span><br /></span>
 <br />Full namespace name: <span id="long-name">clojure.tools.nrepl</span>
 <p></p>
 <h2>Overview</h2>
-<pre id="namespace-docstr"></pre>
-
-
-<br />
-<h2>Public Variables and Functions</h2>
-
-<h2 id="namespace-name">clojure.tools.nrepl.cmdline</h2>
-<pre id="namespace-docstr"></pre>
+<pre id="namespace-docstr">High level nREPL client support.</pre>
 
 
 <br />
 
-<h2 id="namespace-name">clojure.tools.nrepl.helpers</h2>
+
+
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl/client">client</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (client transport response-timeout)
+</pre>
+    <pre id="var-docstr">Returns a fn of zero and one argument, both of which return the current head of a single
+response-seq being read off of the given client-side transport.  The one-arg arity will
+send a given message on the transport before returning the seq.
+
+Most REPL interactions are best performed via `message` and `client-session` on top of
+a client fn returned from this fn.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl.clj#L29" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl/client-session">client-session</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (client-session client &amp; {:keys [session clone]})
+</pre>
+    <pre id="var-docstr">Returns a function of one argument.  Accepts a message that is sent via the
+client provided with a fixed :session id added to it.  Returns the
+head of the client's response seq, filtered to include only
+messages related to the :session id that will terminate when the session is
+closed.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl.clj#L101" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl/code">code</h2>
+    <span id="var-type">macro</span><br />
+    <pre id="var-usage">Usage: (code &amp; body)
+</pre>
+    <pre id="var-docstr">Expands into a string consisting of the macro's body's forms
+(literally, no interpolation/quasiquoting of locals or other
+references), suitable for use in an :eval message, e.g.:
+
+{:op :eval, :code (code (+ 1 1) (slurp "foo.txt"))}</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl.clj#L132" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl/combine-responses">combine-responses</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (combine-responses responses)
+</pre>
+    <pre id="var-docstr">Combines the provided seq of response messages into a single response map.
+
+Certain message slots are combined in special ways:
+
+  - only the last :ns is retained
+  - :value is accumulated into an ordered collection
+  - :status is accumulated into a set
+  - string values (associated with e.g. :out and :err) are concatenated</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl.clj#L111" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl/connect">connect</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (connect &amp; {:keys [port host]})
+</pre>
+    <pre id="var-docstr">Connects to a hosted REPL at the given host (defaults to localhost) and port,
+returning a Transport for that connection.
+
+The default implementation of Transport also implements java.io.Closeable, and is therefore
+usable with `with-open`.
+
+From the client side, Transports are most easily used with `client`, `client-session`, and
+`message`.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl.clj#L163" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl/message">message</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (message client {:keys [id], :as msg, :or {id (uuid)}})
+</pre>
+    <pre id="var-docstr">Returns a function of one argument.  Accepts a message that is sent via the
+client provided with a fixed message :id added to it.  Returns the
+head of the client's response seq, filtered to include only
+messages related to the message :id that will terminate upon receipt of a
+"done" :status.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl.clj#L81" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl/new-session">new-session</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (new-session client &amp; {:keys [clone]})
+</pre>
+    <pre id="var-docstr">Provokes the creation and retention of a new session, optionally as a clone
+of an existing retained session, the id of which must be provided as a :clone
+kwarg.  Returns the new session's id.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl.clj#L91" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl/read-response-value">read-response-value</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (read-response-value {:keys [value], :as msg})
+</pre>
+    <pre id="var-docstr">Returns the provided response message, replacing its :value string with
+the result of (read)ing it.  Returns the message unchanged if the :value
+slot is empty or not a string.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl.clj#L141" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl/response-seq">response-seq</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (response-seq transport)
+       (response-seq transport timeout)
+</pre>
+    <pre id="var-docstr">Returns a lazy seq of messages received via the given Transport.
+Called with no further arguments, will block waiting for each message.
+The seq will end only when the underlying Transport is closed (i.e.
+returns nil from `recv`) or if a message takes longer than `timeout`
+millis to arrive.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl.clj#L19" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl/response-values">response-values</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (response-values responses)
+</pre>
+    <pre id="var-docstr">Given a seq of responses (as from response-seq or returned from any function returned
+by client or client-session), returns a seq of values read from :value slots found
+therein.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl.clj#L153" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl/version">version</h2>
+    <span id="var-type">var</span><br />
+    <pre id="var-usage"></pre>
+    <pre id="var-docstr">Current version of nREPL, map of :major, :minor, :incremental, and :qualifier.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl.clj#L197" id="var-source">Source</a>
+  </div>
+</div>
+<br />
+<h2 id="clojure.tools.nrepl.ack">clojure.tools.nrepl.ack</h2>
 <pre id="namespace-docstr"></pre>
 
 
 <br />
-<div id="var-entry">
-  <hr />
-  <h2 id="clojure.tools.nrepl.helpers/load-file-command">load-file-command</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (load-file-command f)
+
+
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.ack/wait-for-ack">wait-for-ack</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (wait-for-ack timeout)
+</pre>
+    <pre id="var-docstr">Waits for a presumably just-launched nREPL server to connect and
+deliver its port number.  Returns that number if it's delivered
+within `timeout` ms, otherwise nil.  Assumes that `ack`
+middleware has been applied to the local nREPL server handler.
+
+Expected usage:
+
+(reset-ack-port!)
+(start-server already-running-server-port)
+=&gt; (wait-for-ack)
+59872 ; the port of the server started via start-server</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/ack.clj#L16" id="var-source">Source</a>
+  </div>
+</div>
+<br />
+<h2 id="clojure.tools.nrepl.bencode">clojure.tools.nrepl.bencode</h2>
+<pre id="namespace-docstr">A netstring and bencode implementation for Clojure.</pre>
+
+
+<br />
+
+
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.bencode/read-bencode">read-bencode</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (read-bencode input)
+</pre>
+    <pre id="var-docstr">Read bencode token from the input stream.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L253" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.bencode/read-bencode-netstring">read-bencode-netstring</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (read-bencode-netstring input)
+</pre>
+    <pre id="var-docstr">Read a netstring in bencode format. That means without trailing comma.
+Returns the byte array of read bytes.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L430" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.bencode/read-netstring">read-netstring</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (read-netstring input)
+</pre>
+    <pre id="var-docstr">Reads a classic netstring from input—an InputStream. Returns the
+contained binary data as byte array.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L119" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.bencode/write-bencode-netstring">write-bencode-netstring</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (write-bencode-netstring output content)
+</pre>
+    <pre id="var-docstr">Write binary content in bencode netstring format. That means without
+trailing comma. Takes a byte array as content.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L440" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.bencode/write-netstring">write-netstring</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (write-netstring output content)
+</pre>
+    <pre id="var-docstr">Write the given binary data to the output stream in form of a classic
+netstring.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L198" id="var-source">Source</a>
+  </div>
+</div>
+<br />
+<h2 id="clojure.tools.nrepl.cmdline">clojure.tools.nrepl.cmdline</h2>
+<pre id="namespace-docstr">A proof-of-concept command-line client for nREPL.</pre>
+
+
+<br />
+
+
+
+<br />
+<h2 id="clojure.tools.nrepl.helpers">clojure.tools.nrepl.helpers</h2>
+<pre id="namespace-docstr"></pre>
+
+
+<br />
+
+
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.helpers/load-file-command">load-file-command</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (load-file-command f)
        (load-file-command f source-root)
        (load-file-command code file-path file-name)
 </pre>
-  <pre id="var-docstr">Returns a string expression that can be sent to an nREPL session to
+    <pre id="var-docstr">Returns a string expression that can be sent to an nREPL session to
 load the code in given local file in the remote REPL's environment,
 preserving debug information (e.g. line numbers, etc).
 
@@ -108,9 +523,314 @@ The 3-arg variation of this function expects the full source of the file to be l
 the source-root-relative path of the source file, and the name of the file.  e.g.:
 
   (load-file-command "…code here…" "some/ns/name/file.clj" "file.clj")</pre>
-  
-  
-  <a href="https://github.com/clojure/tools.nrepl/blob/b2267071210b83c37bb8d03f4992bc587a7e2c01/src/main/clojure/clojure/tools/nrepl/helpers.clj#L14" id="var-source">Source</a>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/helpers.clj#L13" id="var-source">Source</a>
+  </div>
+</div>
+<br />
+<h2 id="clojure.tools.nrepl.middleware.interruptible-eval">clojure.tools.nrepl.middleware.interruptible-eval</h2>
+<pre id="namespace-docstr"></pre>
+
+
+<br />
+
+
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.middleware.interruptible-eval/*msg*">*msg*</h2>
+    <span id="var-type">var</span><br />
+    <pre id="var-usage"></pre>
+    <pre id="var-docstr">The message currently being evaluated.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/f955b8c809fe1bae057b6eda8a4c69f3dbd3c213/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L11" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.middleware.interruptible-eval/evaluate">evaluate</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (evaluate bindings {:keys [code ns transport], :as msg})
+</pre>
+    <pre id="var-docstr">Evaluates some code within the dynamic context defined by a map of `bindings`,
+as per `clojure.core/get-thread-bindings`.
+
+Uses `clojure.main/repl` to drive the evaluation of :code in a second
+map argument (either a string or a seq of forms to be evaluated), which may
+also optionally specify a :ns (resolved via `find-ns`).  The map MUST
+contain a Transport implementation in :transport; expression results and errors
+will be sent via that Transport.
+
+Returns the dynamic scope that remains after evaluating all expressions
+in :code.
+
+It is assumed that `bindings` already contains useful/appropriate entries
+for all vars indicated by `clojure.main/with-bindings`.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/f955b8c809fe1bae057b6eda8a4c69f3dbd3c213/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L15" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.middleware.interruptible-eval/interruptible-eval">interruptible-eval</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (interruptible-eval h)
+</pre>
+    <pre id="var-docstr">Evaluation middleware that supports interrupts.  Returns a handler that supports
+"eval" and "interrupt" :op-erations that delegates to the given handler
+otherwise.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/f955b8c809fe1bae057b6eda8a4c69f3dbd3c213/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L69" id="var-source">Source</a>
+  </div>
+</div>
+<br />
+<h2 id="clojure.tools.nrepl.middleware.pr-values">clojure.tools.nrepl.middleware.pr-values</h2>
+<pre id="namespace-docstr"></pre>
+
+
+<br />
+
+
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.middleware.pr-values/pr-values">pr-values</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (pr-values h)
+</pre>
+    <pre id="var-docstr">Middleware that returns a handler which transforms any :value slots
+in messages sent via the request's Transport to strings via `pr`,
+delegating all actual message handling to the provided handler.
+
+Requires that results of eval operations are sent in messages in a
+:value slot.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj#L7" id="var-source">Source</a>
+  </div>
+</div>
+<br />
+<h2 id="clojure.tools.nrepl.middleware.session">clojure.tools.nrepl.middleware.session</h2>
+<pre id="namespace-docstr">Support for persistent, cross-connection REPL sessions.</pre>
+
+
+<br />
+
+
+
+<br />
+<h2 id="clojure.tools.nrepl.misc">clojure.tools.nrepl.misc</h2>
+<pre id="namespace-docstr">Misc utilities used in nREPL's implementation (potentially also useful
+for anyone extending it).</pre>
+
+
+<br />
+
+
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.misc/response-for">response-for</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (response-for {:keys [session id]} &amp; response-data)
+</pre>
+    <pre id="var-docstr">Returns a map containing the :session and :id from the "request" `msg`
+as well as all entries specified in `response-data`, which can be one
+or more maps (which will be merged), *or* key-value pairs.
+
+(response-for msg :status :done :value "5")
+(response-for msg {:status :interrupted})
+
+The :session value in `msg` may be any Clojure reference type (to accommodate
+likely implementations of sessions) that has an :id slot in its metadata,
+or a string.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/misc.clj#L29" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.misc/returning">returning</h2>
+    <span id="var-type">macro</span><br />
+    <pre id="var-usage">Usage: (returning x &amp; body)
+</pre>
+    <pre id="var-docstr">Executes `body`, returning `x`.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/misc.clj#L19" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.misc/uuid">uuid</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (uuid)
+</pre>
+    <pre id="var-docstr">Returns a new UUID string.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/misc.clj#L24" id="var-source">Source</a>
+  </div>
+</div>
+<br />
+<h2 id="clojure.tools.nrepl.server">clojure.tools.nrepl.server</h2>
+<pre id="namespace-docstr">Default server implementations</pre>
+
+
+<br />
+
+
+
+<br />
+<h2 id="clojure.tools.nrepl.transport">clojure.tools.nrepl.transport</h2>
+<pre id="namespace-docstr"></pre>
+
+
+<br />
+<div id="proto-section">
+  <p></p>
+  <h2>Protocols</h2>
+  <div id="proto-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.transport/Transport">Transport</h2>
+    <span id="proto-type">Protocol</span><br />
+    <pre id="proto-docstr">Defines the interface for a wire protocol implementation for use
+with nREPL.</pre>
+    Known implementations: <span id="proto-impls"><a href="#clojure.tools.nrepl.transport/FnTransport">FnTransport</a>, <a href="#clojure.tools.nrepl.transport/QueueTransport">QueueTransport</a></span>
+    <div id="proto-var-entry">
+      <br />
+      <h3 id="clojure.tools.nrepl.transport/recv">recv</h3>
+      <span id="var-type">function</span><br />
+      <pre id="var-usage">Usage: (recv this)
+       (recv this timeout)
+</pre>
+      <pre id="var-docstr">Reads and returns the next message received.  Will block.
+Should return nil the a message is not available after `timeout`
+ms or if the underlying channel has been closed.</pre>
+      
+      
+      
+    </div><div id="proto-var-entry">
+      <br />
+      <h3 id="clojure.tools.nrepl.transport/send">send</h3>
+      <span id="var-type">function</span><br />
+      <pre id="var-usage">Usage: (send this msg)
+</pre>
+      <pre id="var-docstr">Sends msg. Implementations should return the transport.</pre>
+      
+      
+      
+    </div>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/transport.clj#L15" id="proto-source">Source</a>
+  </div>
+</div>
+<div id="type-section">
+  <p></p>
+  <h2>Types</h2>
+  <div id="type-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.transport/FnTransport">FnTransport</h2>
+    <span id="type-type">type</span><br />
+    <pre id="type-docstr"></pre>
+    Fields: <span id="type-fields">[recv-fn send-fn close]</span><br />
+    Protocols: <span id="type-protocols"><a href="#clojure.tools.nrepl.transport/Transport">Transport</a></span><br />
+    Interfaces: <span id="type-interfaces">java.io.Closeable</span><br />
+  </div><div id="type-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.transport/QueueTransport">QueueTransport</h2>
+    <span id="type-type">type</span><br />
+    <pre id="type-docstr"></pre>
+    Fields: <span id="type-fields">[in out]</span><br />
+    Protocols: <span id="type-protocols"><a href="#clojure.tools.nrepl.transport/Transport">Transport</a></span><br />
+    Interfaces: <span id="type-interfaces"></span><br />
+  </div>
+</div>
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.transport/bencode">bencode</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (bencode s)
+       (bencode in out &amp; [s])
+</pre>
+    <pre id="var-docstr">Returns a Transport implementation that serializes messages
+over the given Socket or InputStream/OutputStream using bencode.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/transport.clj#L45" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.transport/fn-transport">fn-transport</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (fn-transport read write)
+       (fn-transport read write close)
+</pre>
+    <pre id="var-docstr">Returns a Transport implementation that delegates its functionality
+to the 2 or 3 functions provided.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/transport.clj#L32" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.transport/piped-transports">piped-transports</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (piped-transports)
+</pre>
+    <pre id="var-docstr">Returns a pair of Transports that read from and write to each
+other.  Probably only useful in testing.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/transport.clj#L114" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.transport/tty">tty</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (tty s)
+       (tty in out &amp; [s])
+</pre>
+    <pre id="var-docstr">Returns a Transport implementation suitable for serving an nREPL backend
+via simple in/out readers, as with a tty or telnet connection.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/transport.clj#L63" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.transport/tty-greeting">tty-greeting</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (tty-greeting transport)
+</pre>
+    <pre id="var-docstr">A greeting fn usable with clojure.tools.nrepl.server/start-server,
+meant to be used in conjunction with Transports returned by the
+`tty` function.
+
+Usually, Clojure-aware client-side tooling would provide this upon connecting
+to the server, but telnet et al. isn't that.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/transport.clj#L97" id="var-source">Source</a>
+  </div>
 </div>
 
 
@@ -120,7 +840,7 @@ the source-root-relative path of the source file, and the name of the file.  e.g
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;" id="copyright">Copyright 2007-2011 by Rich Hickey and the various contributors</div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2012 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
