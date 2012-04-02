@@ -1,6 +1,6 @@
 {:namespaces
  ({:source-url
-   "https://github.com/clojure/tools.nrepl/blob/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl-api.html",
    :name "clojure.tools.nrepl",
@@ -81,9 +81,9 @@
    :name "client",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj#L29",
+   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L29",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/client",
    :doc
@@ -95,9 +95,9 @@
    :name "client-session",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj#L101",
+   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L101",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/client-session",
    :doc
@@ -109,9 +109,9 @@
    :name "code",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj#L132",
+   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L132",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/code",
    :doc
@@ -123,9 +123,9 @@
    :name "combine-responses",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj#L111",
+   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L111",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/combine-responses",
    :doc
@@ -140,9 +140,9 @@
    :name "connect",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj#L163",
+   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L163",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/connect",
    :doc
@@ -154,9 +154,9 @@
    :name "message",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj#L81",
+   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L81",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/message",
    :doc
@@ -168,9 +168,9 @@
    :name "new-session",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj#L91",
+   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L91",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/new-session",
    :doc
@@ -182,9 +182,9 @@
    :name "read-response-value",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj#L141",
+   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L141",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/read-response-value",
    :doc
@@ -196,9 +196,9 @@
    :name "response-seq",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj#L19",
+   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L19",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/response-seq",
    :doc
@@ -210,9 +210,9 @@
    :name "response-values",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj#L153",
+   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L153",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/response-values",
    :doc
@@ -222,9 +222,9 @@
    :file "src/main/clojure/clojure/tools/nrepl.clj"}
   {:file "src/main/clojure/clojure/tools/nrepl.clj",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/67f671feafeaea6834e74dd6b9328c2b7c332c4c/src/main/clojure/clojure/tools/nrepl.clj#L226",
+   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L226",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/version",
    :namespace "clojure.tools.nrepl",
