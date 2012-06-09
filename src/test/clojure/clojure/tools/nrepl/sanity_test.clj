@@ -91,6 +91,7 @@
         w (#'session/session-out :out :dummy-session-id remote)]
     (doto w
       .flush
+      (.println "println")
       (.write "abcd")
       (.write (.toCharArray "ef") 0 2)
       (.write "gh" 0 2)
@@ -106,7 +107,7 @@
         (prn #{})
         (flush)))
     
-    (is (= ["abcdefghij "
+    (is (= ["println\nabcdefghij "
             "no writes\nkeyed on linebreaks"
             "\n#{}\n"]
           (->> (repl/response-seq local 0)
