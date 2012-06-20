@@ -20,12 +20,13 @@
    :author "Meikel Brandmeyer",
    :doc "A netstring and bencode implementation for Clojure."}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/cmdline.clj",
+   "https://github.com/clojure/tools.nrepl/blob/aba6c786b88bbd85b20fbf583095915e78868783/src/main/clojure/clojure/tools/nrepl/cmdline.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.cmdline-api.html",
    :name "clojure.tools.nrepl.cmdline",
    :author "Chas Emerick",
-   :doc "A proof-of-concept command-line client for nREPL."}
+   :doc
+   "A proof-of-concept command-line client for nREPL.  Please see\ne.g. reply for a proper command-line nREPL client @\nhttps://github.com/trptcolin/reply/"}
   {:source-url
    "https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/helpers.clj",
    :wiki-url
