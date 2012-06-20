@@ -34,7 +34,7 @@
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/9af6e2bc287e52b6d585fac4c45b0a2ec976fbb6/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/blob/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.interruptible-eval-api.html",
    :name "clojure.tools.nrepl.middleware.interruptible-eval",
@@ -48,7 +48,7 @@
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/99fcef92f914a26c071fe66176d69cc9073315cd/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
+   "https://github.com/clojure/tools.nrepl/blob/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.session-api.html",
    :name "clojure.tools.nrepl.middleware.session",
@@ -333,10 +333,10 @@
   {:name "*msg*",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/9af6e2bc287e52b6d585fac4c45b0a2ec976fbb6/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L13",
+   "https://github.com/clojure/tools.nrepl/blob/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L13",
    :dynamic true,
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/9af6e2bc287e52b6d585fac4c45b0a2ec976fbb6/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/*msg*",
    :doc "The message currently being evaluated.",
@@ -348,9 +348,9 @@
    :name "evaluate",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/9af6e2bc287e52b6d585fac4c45b0a2ec976fbb6/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L17",
+   "https://github.com/clojure/tools.nrepl/blob/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L17",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/9af6e2bc287e52b6d585fac4c45b0a2ec976fbb6/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/evaluate",
    :doc
@@ -364,15 +364,15 @@
    :name "interruptible-eval",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/9af6e2bc287e52b6d585fac4c45b0a2ec976fbb6/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L144",
+   "https://github.com/clojure/tools.nrepl/blob/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L146",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/9af6e2bc287e52b6d585fac4c45b0a2ec976fbb6/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/interruptible-eval",
    :doc
    "Evaluation middleware that supports interrupts.  Returns a handler that supports\n\"eval\" and \"interrupt\" :op-erations that delegates to the given handler\notherwise.",
    :var-type "function",
-   :line 144,
+   :line 146,
    :file
    "src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj"}
   {:arglists ([h]),
