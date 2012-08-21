@@ -10,7 +10,8 @@
                     PushbackReader)
            java.net.Socket
            (java.util.concurrent SynchronousQueue LinkedBlockingQueue
-                                 BlockingQueue TimeUnit)))
+                                 BlockingQueue TimeUnit)
+           clojure.lang.RT))
 
 (defprotocol Transport
   "Defines the interface for a wire protocol implementation for use
@@ -42,6 +43,26 @@
         write
         close))))
 
+(defmulti #^{:private true} <bytes class)
+
+(defmethod <bytes :default
+  [input]
+  input)
+
+(defmethod <bytes (RT/classForName "[B")
+  [#^"[B" input]
+  (String. input "UTF-8"))
+
+(defmethod <bytes clojure.lang.IPersistentVector
+  [input]
+  (vec (map <bytes input)))
+
+(defmethod <bytes clojure.lang.IPersistentMap
+  [input]
+  (->> input
+    (map (fn [[k v]] [k (<bytes v)]))
+    (into {})))
+
 (defn bencode
   "Returns a Transport implementation that serializes messages
    over the given Socket or InputStream/OutputStream using bencode."
@@ -50,7 +71,10 @@
     (let [in (PushbackInputStream. (io/input-stream in))
           out (io/output-stream out)]
       (fn-transport
-        #(be/read-bencode in)
+        #(let [payload   (be/read-bencode in)
+               unencoded (<bytes (payload "-unencoded"))
+               to-decode (apply dissoc payload "-unencoded" unencoded)]
+           (merge payload {"-unencoded" unencoded} (<bytes to-decode)))
         #(locking out
            (doto out
              (be/write-bencode %)
@@ -89,7 +113,7 @@
                                      (deliver head (first s))
                                      (rest s)))
                   @head)]
-      (fn-transport read write            
+      (fn-transport read write
         (when s
           (swap! read-seq (partial cons {:session @session-id :op "close"}))
           #(.close s))))))
