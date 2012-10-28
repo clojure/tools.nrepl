@@ -225,7 +225,7 @@ are not a direct response to a request (e.g. streaming content written to
 content can't be considered responses to those requests).
 
 If the handler being used by an nREPL server returns a logically false value
-(indicating that a message's `:op` was unrecognized), then the the server will
+(indicating that a message's `:op` was unrecognized), then the server will
 respond with a message containing a `:status` of `"unknown-op"`.
 
 Generally, the handler that is provided as the `:handler` to
