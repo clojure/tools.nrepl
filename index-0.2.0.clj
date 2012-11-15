@@ -1,19 +1,19 @@
 {:namespaces
  ({:source-url
-   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl-api.html",
    :name "clojure.tools.nrepl",
    :author "Chas Emerick",
    :doc "High level nREPL client support."}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/ack.clj",
+   "https://github.com/clojure/tools.nrepl/blob/aa3eba4d5f52eb0fd1644c79b978f5ef456fc001/src/main/clojure/clojure/tools/nrepl/ack.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.ack-api.html",
    :name "clojure.tools.nrepl.ack",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj",
+   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.bencode-api.html",
    :name "clojure.tools.nrepl.bencode",
@@ -28,35 +28,48 @@
    :doc
    "A proof-of-concept command-line client for nREPL.  Please see\ne.g. reply for a proper command-line nREPL client @\nhttps://github.com/trptcolin/reply/"}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/helpers.clj",
+   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/helpers.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.helpers-api.html",
    :name "clojure.tools.nrepl.helpers",
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/blob/498f6b08964f21186dd6efdf884553912f2c829b/src/main/clojure/clojure/tools/nrepl/middleware.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware-api.html",
+   :name "clojure.tools.nrepl.middleware",
+   :doc nil}
+  {:source-url
+   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.interruptible-eval-api.html",
    :name "clojure.tools.nrepl.middleware.interruptible-eval",
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj",
+   "https://github.com/clojure/tools.nrepl/blob/b052433a0ca90e0ae93dc7b9ba69738fb0ae04e1/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.load-file-api.html",
+   :name "clojure.tools.nrepl.middleware.load-file",
+   :author "Chas Emerick",
+   :doc nil}
+  {:source-url
+   "https://github.com/clojure/tools.nrepl/blob/93a36fd4a6e45a554e451fb860b29a6e0b5b1b6c/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.pr-values-api.html",
    :name "clojure.tools.nrepl.middleware.pr-values",
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/7d901fb09d02e1c044a66477182fde55722415fb/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
+   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.session-api.html",
    :name "clojure.tools.nrepl.middleware.session",
    :author "Chas Emerick",
    :doc "Support for persistent, cross-connection REPL sessions."}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/misc.clj",
+   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/misc.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.misc-api.html",
    :name "clojure.tools.nrepl.misc",
@@ -64,14 +77,14 @@
    :doc
    "Misc utilities used in nREPL's implementation (potentially also useful\nfor anyone extending it)."}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/26dbf11faa09f1e05b9d97dd815e8efca4fe41cc/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/blob/2f12262834e5b93b8536c81b12df25b2b75e0254/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.server-api.html",
    :name "clojure.tools.nrepl.server",
    :author "Chas Emerick",
    :doc "Default server implementations"}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.transport-api.html",
    :name "clojure.tools.nrepl.transport",
@@ -82,9 +95,9 @@
    :name "client",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L29",
+   "https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L29",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/client",
    :doc
@@ -96,9 +109,9 @@
    :name "client-session",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L101",
+   "https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L101",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/client-session",
    :doc
@@ -110,9 +123,9 @@
    :name "code",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L132",
+   "https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L132",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/code",
    :doc
@@ -124,9 +137,9 @@
    :name "combine-responses",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L111",
+   "https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L111",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/combine-responses",
    :doc
@@ -141,9 +154,9 @@
    :name "connect",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L163",
+   "https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L163",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/connect",
    :doc
@@ -155,9 +168,9 @@
    :name "message",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L81",
+   "https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L81",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/message",
    :doc
@@ -169,9 +182,9 @@
    :name "new-session",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L91",
+   "https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L91",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/new-session",
    :doc
@@ -183,9 +196,9 @@
    :name "read-response-value",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L141",
+   "https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L141",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/read-response-value",
    :doc
@@ -197,9 +210,9 @@
    :name "response-seq",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L19",
+   "https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L19",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/response-seq",
    :doc
@@ -211,9 +224,9 @@
    :name "response-values",
    :namespace "clojure.tools.nrepl",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L153",
+   "https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L153",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/response-values",
    :doc
@@ -223,9 +236,9 @@
    :file "src/main/clojure/clojure/tools/nrepl.clj"}
   {:file "src/main/clojure/clojure/tools/nrepl.clj",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj",
+   "https://github.com/clojure/tools.nrepl/raw/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L226",
+   "https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L226",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/version",
    :namespace "clojure.tools.nrepl",
@@ -238,9 +251,9 @@
    :name "wait-for-ack",
    :namespace "clojure.tools.nrepl.ack",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/ack.clj#L16",
+   "https://github.com/clojure/tools.nrepl/blob/aa3eba4d5f52eb0fd1644c79b978f5ef456fc001/src/main/clojure/clojure/tools/nrepl/ack.clj#L16",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/ack.clj",
+   "https://github.com/clojure/tools.nrepl/raw/aa3eba4d5f52eb0fd1644c79b978f5ef456fc001/src/main/clojure/clojure/tools/nrepl/ack.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.ack/wait-for-ack",
    :doc
@@ -252,112 +265,112 @@
    :name "read-bencode",
    :namespace "clojure.tools.nrepl.bencode",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L253",
+   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj#L251",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj",
+   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.bencode/read-bencode",
    :doc "Read bencode token from the input stream.",
    :var-type "function",
-   :line 253,
-   :file "src/main/clojure/clojure/tools/nrepl/bencode.clj"}
-  {:arglists ([input]),
-   :name "read-bencode-netstring",
-   :namespace "clojure.tools.nrepl.bencode",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L430",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj",
-   :wiki-url
-   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.bencode/read-bencode-netstring",
-   :doc
-   "Read a netstring in bencode format. That means without trailing comma.\nReturns the byte array of read bytes.",
-   :var-type "function",
-   :line 430,
+   :line 251,
    :file "src/main/clojure/clojure/tools/nrepl/bencode.clj"}
   {:arglists ([input]),
    :name "read-netstring",
    :namespace "clojure.tools.nrepl.bencode",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L119",
+   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj#L157",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj",
+   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.bencode/read-netstring",
    :doc
    "Reads a classic netstring from input—an InputStream. Returns the\ncontained binary data as byte array.",
    :var-type "function",
-   :line 119,
-   :file "src/main/clojure/clojure/tools/nrepl/bencode.clj"}
-  {:arglists ([output content]),
-   :name "write-bencode-netstring",
-   :namespace "clojure.tools.nrepl.bencode",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L440",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj",
-   :wiki-url
-   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.bencode/write-bencode-netstring",
-   :doc
-   "Write binary content in bencode netstring format. That means without\ntrailing comma. Takes a byte array as content.",
-   :var-type "function",
-   :line 440,
+   :line 157,
    :file "src/main/clojure/clojure/tools/nrepl/bencode.clj"}
   {:arglists ([output content]),
    :name "write-netstring",
    :namespace "clojure.tools.nrepl.bencode",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L198",
+   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj#L196",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj",
+   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.bencode/write-netstring",
    :doc
    "Write the given binary data to the output stream in form of a classic\nnetstring.",
    :var-type "function",
-   :line 198,
+   :line 196,
    :file "src/main/clojure/clojure/tools/nrepl/bencode.clj"}
   {:arglists ([f] [f source-root] [code file-path file-name]),
    :name "load-file-command",
    :namespace "clojure.tools.nrepl.helpers",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/helpers.clj#L13",
+   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/helpers.clj#L14",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/helpers.clj",
+   "https://github.com/clojure/tools.nrepl/raw/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/helpers.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.helpers/load-file-command",
    :doc
-   "Returns a string expression that can be sent to an nREPL session to\nload the code in given local file in the remote REPL's environment,\npreserving debug information (e.g. line numbers, etc).\n\nTypical usage: ((:send connection)\n                 (load-file-command (java.io.File. \"/path/to/clojure/file.clj\")))\n\nIf appropriate, the source path from which the code is being loaded may\nbe provided as well (suitably trimming the file's path to a relative one\nwhen loaded).\n\nThe 3-arg variation of this function expects the full source of the file to be loaded,\nthe source-root-relative path of the source file, and the name of the file.  e.g.:\n\n  (load-file-command \"…code here…\" \"some/ns/name/file.clj\" \"file.clj\")",
+   "(If it is available, sending clojure.tools.nrepl.middleware.load-file\n compatible messages is far preferable.)\n\nReturns a string expression that can be sent to an nREPL session to\nload the Clojure code in given local file in the remote REPL's environment,\npreserving debug information (e.g. line numbers, etc).\n\nTypical usage: (nrepl-client-fn\n                 {:op \"eval\" :code\n                   (load-file-command \"/path/to/clojure/file.clj\")})\n\nIf appropriate, the source path from which the code is being loaded may\nbe provided as well (suitably trimming the file's path to a relative one\nwhen loaded).\n\nThe 3-arg variation of this function expects the full source of the file to be loaded,\nthe source-root-relative path of the source file, and the name of the file.  e.g.:\n\n  (load-file-command \"…code here…\" \"some/ns/name/file.clj\" \"file.clj\")",
    :var-type "function",
-   :line 13,
+   :line 14,
    :file "src/main/clojure/clojure/tools/nrepl/helpers.clj"}
+  {:arglists ([{:keys [ops versions]}]),
+   :name "describe-markdown",
+   :namespace "clojure.tools.nrepl.middleware",
+   :source-url
+   "https://github.com/clojure/tools.nrepl/blob/498f6b08964f21186dd6efdf884553912f2c829b/src/main/clojure/clojure/tools/nrepl/middleware.clj#L142",
+   :raw-source-url
+   "https://github.com/clojure/tools.nrepl/raw/498f6b08964f21186dd6efdf884553912f2c829b/src/main/clojure/clojure/tools/nrepl/middleware.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware/describe-markdown",
+   :doc
+   "Given a message containing the response to a verbose :describe message,\ngenerates a markdown string conveying the information therein, suitable for\nuse in e.g. wiki pages, github, etc.",
+   :var-type "function",
+   :line 142,
+   :file "src/main/clojure/clojure/tools/nrepl/middleware.clj"}
+  {:arglists ([middleware-var descriptor]),
+   :name "set-descriptor!",
+   :namespace "clojure.tools.nrepl.middleware",
+   :source-url
+   "https://github.com/clojure/tools.nrepl/blob/498f6b08964f21186dd6efdf884553912f2c829b/src/main/clojure/clojure/tools/nrepl/middleware.clj#L19",
+   :raw-source-url
+   "https://github.com/clojure/tools.nrepl/raw/498f6b08964f21186dd6efdf884553912f2c829b/src/main/clojure/clojure/tools/nrepl/middleware.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware/set-descriptor!",
+   :doc
+   "Sets the given [descriptor] map as the ::descriptor metadata on\nthe provided [middleware-var], after assoc'ing in the var's\nfully-qualified name as the descriptor's \"implemented-by\" value.",
+   :var-type "function",
+   :line 19,
+   :file "src/main/clojure/clojure/tools/nrepl/middleware.clj"}
   {:name "*msg*",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L13",
+   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L14",
    :dynamic true,
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/*msg*",
    :doc "The message currently being evaluated.",
    :var-type "var",
-   :line 13,
+   :line 14,
    :file
    "src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj"}
   {:arglists ([bindings {:keys [code ns transport], :as msg}]),
    :name "evaluate",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L17",
+   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L18",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/evaluate",
    :doc
    "Evaluates some code within the dynamic context defined by a map of `bindings`,\nas per `clojure.core/get-thread-bindings`.\n\nUses `clojure.main/repl` to drive the evaluation of :code in a second\nmap argument (either a string or a seq of forms to be evaluated), which may\nalso optionally specify a :ns (resolved via `find-ns`).  The map MUST\ncontain a Transport implementation in :transport; expression results and errors\nwill be sent via that Transport.\n\nReturns the dynamic scope that remains after evaluating all expressions\nin :code.\n\nIt is assumed that `bindings` already contains useful/appropriate entries\nfor all vars indicated by `clojure.main/with-bindings`.",
    :var-type "function",
-   :line 17,
+   :line 18,
    :file
    "src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj"}
   {:arglists
@@ -365,39 +378,70 @@
    :name "interruptible-eval",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L146",
+   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L153",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/interruptible-eval",
    :doc
    "Evaluation middleware that supports interrupts.  Returns a handler that supports\n\"eval\" and \"interrupt\" :op-erations that delegates to the given handler\notherwise.",
    :var-type "function",
-   :line 146,
+   :line 153,
    :file
    "src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj"}
+  {:arglists ([file file-path file-name]),
+   :name "load-file-code",
+   :namespace "clojure.tools.nrepl.middleware.load-file",
+   :source-url
+   "https://github.com/clojure/tools.nrepl/blob/b052433a0ca90e0ae93dc7b9ba69738fb0ae04e1/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj#L47",
+   :dynamic true,
+   :raw-source-url
+   "https://github.com/clojure/tools.nrepl/raw/b052433a0ca90e0ae93dc7b9ba69738fb0ae04e1/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.load-file/load-file-code",
+   :doc
+   "Given the contents of a file, its _source-path-relative_ path,\nand its filename, returns a string of code containing a single\nexpression that, when evaluated, will load those contents with\nappropriate filename references and line numbers in metadata, etc.\n\nNote that because a single expression is produced, very large\nfile loads will fail due to the JVM method size limitation.\nIn such cases, see `load-file-code'`.",
+   :var-type "function",
+   :line 47,
+   :file
+   "src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj"}
+  {:arglists ([h]),
+   :name "wrap-load-file",
+   :namespace "clojure.tools.nrepl.middleware.load-file",
+   :source-url
+   "https://github.com/clojure/tools.nrepl/blob/b052433a0ca90e0ae93dc7b9ba69738fb0ae04e1/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj#L61",
+   :raw-source-url
+   "https://github.com/clojure/tools.nrepl/raw/b052433a0ca90e0ae93dc7b9ba69738fb0ae04e1/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.load-file/wrap-load-file",
+   :doc
+   "Middleware that evaluates a file's contents, as per load-file,\nbut with all data supplied in the sent message (i.e. safe for use\nwith remote REPL environments).\n\nThis middleware depends on the availability of an :op \"eval\"\nmiddleware below it (such as interruptable-eval).",
+   :var-type "function",
+   :line 61,
+   :file
+   "src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj"}
   {:arglists ([h]),
    :name "pr-values",
    :namespace "clojure.tools.nrepl.middleware.pr-values",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj#L7",
+   "https://github.com/clojure/tools.nrepl/blob/93a36fd4a6e45a554e451fb860b29a6e0b5b1b6c/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj#L8",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj",
+   "https://github.com/clojure/tools.nrepl/raw/93a36fd4a6e45a554e451fb860b29a6e0b5b1b6c/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.pr-values/pr-values",
    :doc
    "Middleware that returns a handler which transforms any :value slots\nin messages sent via the request's Transport to strings via `pr`,\ndelegating all actual message handling to the provided handler.\n\nRequires that results of eval operations are sent in messages in a\n:value slot.",
    :var-type "function",
-   :line 7,
+   :line 8,
    :file
    "src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj"}
   {:arglists ([{:keys [session id]} & response-data]),
    :name "response-for",
    :namespace "clojure.tools.nrepl.misc",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/misc.clj#L29",
+   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/misc.clj#L29",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/misc.clj",
+   "https://github.com/clojure/tools.nrepl/raw/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/misc.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.misc/response-for",
    :doc
@@ -409,9 +453,9 @@
    :name "returning",
    :namespace "clojure.tools.nrepl.misc",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/misc.clj#L19",
+   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/misc.clj#L19",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/misc.clj",
+   "https://github.com/clojure/tools.nrepl/raw/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/misc.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.misc/returning",
    :doc "Executes `body`, returning `x`.",
@@ -422,9 +466,9 @@
    :name "uuid",
    :namespace "clojure.tools.nrepl.misc",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/misc.clj#L24",
+   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/misc.clj#L24",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/misc.clj",
+   "https://github.com/clojure/tools.nrepl/raw/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/misc.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.misc/uuid",
    :doc "Returns a new UUID string.",
@@ -435,71 +479,71 @@
    :name "bencode",
    :namespace "clojure.tools.nrepl.transport",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj#L45",
+   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L87",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/bencode",
    :doc
    "Returns a Transport implementation that serializes messages\nover the given Socket or InputStream/OutputStream using bencode.",
    :var-type "function",
-   :line 45,
+   :line 87,
    :file "src/main/clojure/clojure/tools/nrepl/transport.clj"}
   {:arglists ([read write] [read write close]),
    :name "fn-transport",
    :namespace "clojure.tools.nrepl.transport",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj#L32",
+   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L34",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/fn-transport",
    :doc
    "Returns a Transport implementation that delegates its functionality\nto the 2 or 3 functions provided.",
    :var-type "function",
-   :line 32,
+   :line 34,
    :file "src/main/clojure/clojure/tools/nrepl/transport.clj"}
   {:arglists ([]),
    :name "piped-transports",
    :namespace "clojure.tools.nrepl.transport",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj#L114",
+   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L162",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/piped-transports",
    :doc
    "Returns a pair of Transports that read from and write to each other.",
    :var-type "function",
-   :line 114,
+   :line 162,
    :file "src/main/clojure/clojure/tools/nrepl/transport.clj"}
   {:arglists ([s] [in out & [s]]),
    :name "tty",
    :namespace "clojure.tools.nrepl.transport",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj#L63",
+   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L111",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/tty",
    :doc
    "Returns a Transport implementation suitable for serving an nREPL backend\nvia simple in/out readers, as with a tty or telnet connection.",
    :var-type "function",
-   :line 63,
+   :line 111,
    :file "src/main/clojure/clojure/tools/nrepl/transport.clj"}
   {:arglists ([transport]),
    :name "tty-greeting",
    :namespace "clojure.tools.nrepl.transport",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj#L97",
+   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L145",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/tty-greeting",
    :doc
    "A greeting fn usable with clojure.tools.nrepl.server/start-server,\nmeant to be used in conjunction with Transports returned by the\n`tty` function.\n\nUsually, Clojure-aware client-side tooling would provide this upon connecting\nto the server, but telnet et al. isn't that.",
    :var-type "function",
-   :line 97,
+   :line 145,
    :file "src/main/clojure/clojure/tools/nrepl/transport.clj"}
   {:file nil,
    :raw-source-url nil,
@@ -519,13 +563,13 @@
    :name "QueueTransport"}
   {:file "src/main/clojure/clojure/tools/nrepl/transport.clj",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj#L15",
+   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L16",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/Transport",
    :namespace "clojure.tools.nrepl.transport",
-   :line 15,
+   :line 16,
    :var-type "protocol",
    :doc
    "Defines the interface for a wire protocol implementation for use\nwith nREPL.",

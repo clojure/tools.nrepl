@@ -99,13 +99,7 @@ namespace.
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.bencode/read-bencode">read-bencode</a>
       
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.bencode/read-bencode-netstring">read-bencode-netstring</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.bencode/read-netstring">read-netstring</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.bencode/write-bencode-netstring">write-bencode-netstring</a>
       
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.bencode/write-netstring">write-netstring</a>
@@ -121,6 +115,15 @@ namespace.
       
     </div>
   </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.middleware" style="margin-top: 3px;">clojure.tools.nrepl.middleware</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware/describe-markdown">describe-markdown</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware/set-descriptor!">set-descriptor!</a>
+      
+    </div>
+  </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#clojure.tools.nrepl.middleware.interruptible-eval" style="margin-top: 3px;">clojure.tools.nrepl.middleware.interruptible-eval</a>
     <div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware.interruptible-eval/*msg*">*msg*</a>
@@ -130,6 +133,15 @@ namespace.
       
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware.interruptible-eval/interruptible-eval">interruptible-eval</a>
+      
+    </div>
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clojure.tools.nrepl.middleware.load-file" style="margin-top: 3px;">clojure.tools.nrepl.middleware.load-file</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware.load-file/load-file-code">load-file-code</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware.load-file/wrap-load-file">wrap-load-file</a>
       
     </div>
   </div><div style="margin-left: 1em;" class="toc-section">
@@ -223,7 +235,7 @@ Most REPL interactions are best performed via `message` and `client-session` on 
 a client fn returned from this fn.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L29" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L29" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -238,7 +250,7 @@ messages related to the :session id that will terminate when the session is
 closed.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L101" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L101" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -253,7 +265,7 @@ references), suitable for use in an :eval message, e.g.:
 {:op :eval, :code (code (+ 1 1) (slurp "foo.txt"))}</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L132" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L132" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -271,7 +283,7 @@ Certain message slots are combined in special ways:
   - string values (associated with e.g. :out and :err) are concatenated</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L111" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L111" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -287,7 +299,7 @@ Transports are most easily used with `client`, `client-session`, and
 `message`, depending on the semantics desired.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L163" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L163" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -302,7 +314,7 @@ messages related to the message :id that will terminate upon receipt of a
 "done" :status.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L81" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L81" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -315,7 +327,7 @@ of an existing retained session, the id of which must be provided as a :clone
 kwarg.  Returns the new session's id.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L91" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L91" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -328,7 +340,7 @@ the result of (read)ing it.  Returns the message unchanged if the :value
 slot is empty or not a string.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L141" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L141" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -344,7 +356,7 @@ returns nil from `recv`) or if a message takes longer than `timeout`
 millis to arrive.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L19" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L19" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -357,7 +369,7 @@ by client or client-session), returns a seq of values read from :value slots fou
 therein.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L153" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L153" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -367,7 +379,7 @@ therein.</pre>
     <pre id="var-docstr">Current version of nREPL, map of :major, :minor, :incremental, and :qualifier.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/71866624044452c402ba631bc78b919d79dd4514/src/main/clojure/clojure/tools/nrepl.clj#L226" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/0b8b06b622e3a2f9765f43fac53d47d9fe27feff/src/main/clojure/clojure/tools/nrepl.clj#L226" id="var-source">Source</a>
   </div>
 </div>
 <br />
@@ -401,7 +413,7 @@ Expected usage:
 59872 ; the port of the server started via start-server</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/ack.clj#L16" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/aa3eba4d5f52eb0fd1644c79b978f5ef456fc001/src/main/clojure/clojure/tools/nrepl/ack.clj#L16" id="var-source">Source</a>
   </div>
 </div>
 <br />
@@ -425,19 +437,7 @@ Expected usage:
     <pre id="var-docstr">Read bencode token from the input stream.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L253" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.tools.nrepl.bencode/read-bencode-netstring">read-bencode-netstring</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (read-bencode-netstring input)
-</pre>
-    <pre id="var-docstr">Read a netstring in bencode format. That means without trailing comma.
-Returns the byte array of read bytes.</pre>
-    
-    
-    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L430" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj#L251" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -449,19 +449,7 @@ Returns the byte array of read bytes.</pre>
 contained binary data as byte array.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L119" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.tools.nrepl.bencode/write-bencode-netstring">write-bencode-netstring</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (write-bencode-netstring output content)
-</pre>
-    <pre id="var-docstr">Write binary content in bencode netstring format. That means without
-trailing comma. Takes a byte array as content.</pre>
-    
-    
-    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L440" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj#L157" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -473,7 +461,7 @@ trailing comma. Takes a byte array as content.</pre>
 netstring.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/bencode.clj#L198" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj#L196" id="var-source">Source</a>
   </div>
 </div>
 <br />
@@ -507,12 +495,16 @@ e.g. reply for a proper command-line nREPL client @
        (load-file-command f source-root)
        (load-file-command code file-path file-name)
 </pre>
-    <pre id="var-docstr">Returns a string expression that can be sent to an nREPL session to
-load the code in given local file in the remote REPL's environment,
+    <pre id="var-docstr">(If it is available, sending clojure.tools.nrepl.middleware.load-file
+ compatible messages is far preferable.)
+
+Returns a string expression that can be sent to an nREPL session to
+load the Clojure code in given local file in the remote REPL's environment,
 preserving debug information (e.g. line numbers, etc).
 
-Typical usage: ((:send connection)
-                 (load-file-command (java.io.File. "/path/to/clojure/file.clj")))
+Typical usage: (nrepl-client-fn
+                 {:op "eval" :code
+                   (load-file-command "/path/to/clojure/file.clj")})
 
 If appropriate, the source path from which the code is being loaded may
 be provided as well (suitably trimming the file's path to a relative one
@@ -524,7 +516,46 @@ the source-root-relative path of the source file, and the name of the file.  e.g
   (load-file-command "…code here…" "some/ns/name/file.clj" "file.clj")</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/2b2b735df9c5d4bdc4d987ad82fe282a07877b90/src/main/clojure/clojure/tools/nrepl/helpers.clj#L13" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/helpers.clj#L14" id="var-source">Source</a>
+  </div>
+</div>
+<br />
+<h2 id="clojure.tools.nrepl.middleware">clojure.tools.nrepl.middleware</h2>
+<pre id="namespace-docstr"></pre>
+
+
+<br />
+
+
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.middleware/describe-markdown">describe-markdown</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (describe-markdown {:keys [ops versions]})
+</pre>
+    <pre id="var-docstr">Given a message containing the response to a verbose :describe message,
+generates a markdown string conveying the information therein, suitable for
+use in e.g. wiki pages, github, etc.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/498f6b08964f21186dd6efdf884553912f2c829b/src/main/clojure/clojure/tools/nrepl/middleware.clj#L142" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.middleware/set-descriptor!">set-descriptor!</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (set-descriptor! middleware-var descriptor)
+</pre>
+    <pre id="var-docstr">Sets the given [descriptor] map as the ::descriptor metadata on
+the provided [middleware-var], after assoc'ing in the var's
+fully-qualified name as the descriptor's "implemented-by" value.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/498f6b08964f21186dd6efdf884553912f2c829b/src/main/clojure/clojure/tools/nrepl/middleware.clj#L19" id="var-source">Source</a>
   </div>
 </div>
 <br />
@@ -547,7 +578,7 @@ the source-root-relative path of the source file, and the name of the file.  e.g
     <pre id="var-docstr">The message currently being evaluated.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L13" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L14" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -571,7 +602,7 @@ It is assumed that `bindings` already contains useful/appropriate entries
 for all vars indicated by `clojure.main/with-bindings`.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L17" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L18" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -584,7 +615,54 @@ for all vars indicated by `clojure.main/with-bindings`.</pre>
 otherwise.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/3ba1320cd2074c155eeba3d3da9fabd2e9ab54dc/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L146" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L153" id="var-source">Source</a>
+  </div>
+</div>
+<br />
+<h2 id="clojure.tools.nrepl.middleware.load-file">clojure.tools.nrepl.middleware.load-file</h2>
+<pre id="namespace-docstr"></pre>
+
+
+<br />
+
+
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.middleware.load-file/load-file-code">load-file-code</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (load-file-code file file-path file-name)
+</pre>
+    <pre id="var-docstr">Given the contents of a file, its _source-path-relative_ path,
+and its filename, returns a string of code containing a single
+expression that, when evaluated, will load those contents with
+appropriate filename references and line numbers in metadata, etc.
+
+Note that because a single expression is produced, very large
+file loads will fail due to the JVM method size limitation.
+In such cases, see `load-file-code'`.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/b052433a0ca90e0ae93dc7b9ba69738fb0ae04e1/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj#L47" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.middleware.load-file/wrap-load-file">wrap-load-file</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (wrap-load-file h)
+</pre>
+    <pre id="var-docstr">Middleware that evaluates a file's contents, as per load-file,
+but with all data supplied in the sent message (i.e. safe for use
+with remote REPL environments).
+
+This middleware depends on the availability of an :op "eval"
+middleware below it (such as interruptable-eval).</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/b052433a0ca90e0ae93dc7b9ba69738fb0ae04e1/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj#L61" id="var-source">Source</a>
   </div>
 </div>
 <br />
@@ -613,7 +691,7 @@ Requires that results of eval operations are sent in messages in a
 :value slot.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj#L7" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/93a36fd4a6e45a554e451fb860b29a6e0b5b1b6c/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj#L8" id="var-source">Source</a>
   </div>
 </div>
 <br />
@@ -656,7 +734,7 @@ likely implementations of sessions) that has an :id slot in its metadata,
 or a string.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/misc.clj#L29" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/misc.clj#L29" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -667,7 +745,7 @@ or a string.</pre>
     <pre id="var-docstr">Executes `body`, returning `x`.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/misc.clj#L19" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/misc.clj#L19" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -678,7 +756,7 @@ or a string.</pre>
     <pre id="var-docstr">Returns a new UUID string.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/4e3317c5ab032d0e08bc359966db64be702d2752/src/main/clojure/clojure/tools/nrepl/misc.clj#L24" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/misc.clj#L24" id="var-source">Source</a>
   </div>
 </div>
 <br />
@@ -733,7 +811,7 @@ ms or if the underlying channel has been closed.</pre>
     </div>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj#L15" id="proto-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L16" id="proto-source">Source</a>
   </div>
 </div>
 <div id="type-section">
@@ -774,7 +852,7 @@ ms or if the underlying channel has been closed.</pre>
 over the given Socket or InputStream/OutputStream using bencode.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj#L45" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L87" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -787,7 +865,7 @@ over the given Socket or InputStream/OutputStream using bencode.</pre>
 to the 2 or 3 functions provided.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj#L32" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L34" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -798,7 +876,7 @@ to the 2 or 3 functions provided.</pre>
     <pre id="var-docstr">Returns a pair of Transports that read from and write to each other.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj#L114" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L162" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -811,7 +889,7 @@ to the 2 or 3 functions provided.</pre>
 via simple in/out readers, as with a tty or telnet connection.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj#L63" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L111" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -827,7 +905,7 @@ Usually, Clojure-aware client-side tooling would provide this upon connecting
 to the server, but telnet et al. isn't that.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/b01a228748babbe959e5c967df4096e35d05d23d/src/main/clojure/clojure/tools/nrepl/transport.clj#L97" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L145" id="var-source">Source</a>
   </div>
 </div>
 
