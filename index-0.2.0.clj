@@ -35,7 +35,7 @@
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/498f6b08964f21186dd6efdf884553912f2c829b/src/main/clojure/clojure/tools/nrepl/middleware.clj",
+   "https://github.com/clojure/tools.nrepl/blob/c0f266d7399a82b8c2d143af19d1d167b578f914/src/main/clojure/clojure/tools/nrepl/middleware.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware-api.html",
    :name "clojure.tools.nrepl.middleware",
@@ -77,7 +77,7 @@
    :doc
    "Misc utilities used in nREPL's implementation (potentially also useful\nfor anyone extending it)."}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/2f12262834e5b93b8536c81b12df25b2b75e0254/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/blob/2124e1399097a4b43af76c1ed9602d22f42f37d5/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.server-api.html",
    :name "clojure.tools.nrepl.server",
@@ -316,27 +316,13 @@
    :var-type "function",
    :line 14,
    :file "src/main/clojure/clojure/tools/nrepl/helpers.clj"}
-  {:arglists ([{:keys [ops versions]}]),
-   :name "describe-markdown",
-   :namespace "clojure.tools.nrepl.middleware",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/498f6b08964f21186dd6efdf884553912f2c829b/src/main/clojure/clojure/tools/nrepl/middleware.clj#L142",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/498f6b08964f21186dd6efdf884553912f2c829b/src/main/clojure/clojure/tools/nrepl/middleware.clj",
-   :wiki-url
-   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware/describe-markdown",
-   :doc
-   "Given a message containing the response to a verbose :describe message,\ngenerates a markdown string conveying the information therein, suitable for\nuse in e.g. wiki pages, github, etc.",
-   :var-type "function",
-   :line 142,
-   :file "src/main/clojure/clojure/tools/nrepl/middleware.clj"}
   {:arglists ([middleware-var descriptor]),
    :name "set-descriptor!",
    :namespace "clojure.tools.nrepl.middleware",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/498f6b08964f21186dd6efdf884553912f2c829b/src/main/clojure/clojure/tools/nrepl/middleware.clj#L19",
+   "https://github.com/clojure/tools.nrepl/blob/c0f266d7399a82b8c2d143af19d1d167b578f914/src/main/clojure/clojure/tools/nrepl/middleware.clj#L19",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/498f6b08964f21186dd6efdf884553912f2c829b/src/main/clojure/clojure/tools/nrepl/middleware.clj",
+   "https://github.com/clojure/tools.nrepl/raw/c0f266d7399a82b8c2d143af19d1d167b578f914/src/main/clojure/clojure/tools/nrepl/middleware.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware/set-descriptor!",
    :doc
