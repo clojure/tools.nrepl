@@ -76,17 +76,26 @@
    #'clojure.tools.nrepl.middleware.session/add-stdin
    #'clojure.tools.nrepl.middleware.session/session])
 
+(defn apply-middleware-stack [h middlewares mw-arg-map]
+  (reduce (fn [h mw] (apply mw h (mw-arg-map mw))) h middlewares))
+
 (defn default-handler
   "A default handler supporting interruptible evaluation, stdin, sessions, and
    readable representations of evaluated expressions via `pr`.
 
    Additional middlewares to mix into the default stack may be provided; these
    should all be values (usually vars) that have an nREPL middleware descriptor
-   in their metadata (see clojure.tools.nrepl.middleware/set-descriptor!)."
-  [& additional-middlewares]
-  (let [stack (middleware/linearize-middleware-stack (concat default-middlewares
-                                                             additional-middlewares))]
-    ((apply comp (reverse stack)) unknown-op)))
+   in their metadata (see clojure.tools.nrepl.middleware/set-descriptor!).
+
+   If the first argument is a map, it is used to pass additional arguments into
+   each middleware as it is applied, evaluating (apply mw h (mw-args mw))"
+  [& mw-args+additional-middlewares]
+  (let [[mw-args & additional-middlewares]
+        (#(if (map? (first %)) % (cons {} %)) mw-args+additional-middlewares)]
+    (apply-middleware-stack unknown-op
+                            (middleware/linearize-middleware-stack
+                             (concat default-middlewares additional-middlewares))
+                            mw-args)))
 
 ;; TODO
 #_(defn- output-subscriptions
