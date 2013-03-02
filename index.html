@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>clojure.tools.nrepl - Network REPL 0.2.2 API documentation</title>
+    <title>clojure.tools.nrepl - Network REPL 0.2.3 API documentation</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -25,7 +25,7 @@ namespace.
       <div id="leftcolumn"><div style="text-align: center;"></div>
 <div class="menu">
   <div class="WikiCustomNav WikiElement wiki">
-    <span class="toc-header"><span id="project-name">Network REPL</span> <span id="version">0.2.2</span> API</span><br />
+    <span class="toc-header"><span id="project-name">Network REPL</span> <span id="version">0.2.3</span> API</span><br />
     <ul>
       <li><a class="wiki_link" href="index.html">Overview</a></li>
       <li><a class="wiki_link" href="api-index.html">API Index</a></li>
@@ -152,7 +152,13 @@ namespace.
     </div>
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#clojure.tools.nrepl.middleware.session" style="margin-top: 3px;">clojure.tools.nrepl.middleware.session</a>
-    
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware.session/add-stdin">add-stdin</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware.session/session">session</a>
+      
+    </div>
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#clojure.tools.nrepl.misc" style="margin-top: 3px;">clojure.tools.nrepl.misc</a>
     <div style="margin-left: 1em;" class="toc-entry">
@@ -167,7 +173,25 @@ namespace.
     </div>
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#clojure.tools.nrepl.server" style="margin-top: 3px;">clojure.tools.nrepl.server</a>
-    
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.server/Server">Server</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.server/default-handler">default-handler</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.server/handle">handle</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.server/start-server">start-server</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.server/stop-server">stop-server</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.server/unknown-op">unknown-op</a>
+      
+    </div>
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#clojure.tools.nrepl.transport" style="margin-top: 3px;">clojure.tools.nrepl.transport</a>
     <div style="margin-left: 1em;" class="toc-entry">
@@ -203,7 +227,7 @@ namespace.
 </div>
 </div>
                 <div id="content-tag"><h1 id="overview">API for <span id="clojure.tools.nrepl">clojure.tools.nrepl</span>
-  - <span id="header-project">Network REPL</span> <span id="header-version">0.2.2</span><span id="header-status-block"> (<span id="header-status">in development</span>)</span>
+  - <span id="header-project">Network REPL</span> <span id="header-version">0.2.3</span><span id="header-status-block"> (<span id="header-status">in development</span>)</span>
   </h1>
 <span id="author-line">by <span id="author-name">Chas Emerick</span><br /></span>
 <br />Full namespace name: <span id="long-name">clojure.tools.nrepl</span>
@@ -235,7 +259,7 @@ Most REPL interactions are best performed via `message` and `client-session` on 
 a client fn returned from this fn.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L29" id="var-source">Source</a>
+    
   </div><div id="var-entry">
     <br />
     <hr />
@@ -250,7 +274,7 @@ messages related to the :session id that will terminate when the session is
 closed.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L105" id="var-source">Source</a>
+    
   </div><div id="var-entry">
     <br />
     <hr />
@@ -265,7 +289,7 @@ references), suitable for use in an :eval message, e.g.:
 {:op :eval, :code (code (+ 1 1) (slurp "foo.txt"))}</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L143" id="var-source">Source</a>
+    
   </div><div id="var-entry">
     <br />
     <hr />
@@ -277,7 +301,7 @@ references), suitable for use in an :eval message, e.g.:
 of the given expressions.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L137" id="var-source">Source</a>
+    
   </div><div id="var-entry">
     <br />
     <hr />
@@ -295,7 +319,7 @@ Certain message slots are combined in special ways:
   - string values (associated with e.g. :out and :err) are concatenated</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L115" id="var-source">Source</a>
+    
   </div><div id="var-entry">
     <br />
     <hr />
@@ -311,7 +335,7 @@ Transports are most easily used with `client`, `client-session`, and
 `message`, depending on the semantics desired.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L174" id="var-source">Source</a>
+    
   </div><div id="var-entry">
     <br />
     <hr />
@@ -325,7 +349,7 @@ messages related to the message :id that will terminate upon receipt of a
 "done" :status.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L86" id="var-source">Source</a>
+    
   </div><div id="var-entry">
     <br />
     <hr />
@@ -338,7 +362,7 @@ of an existing retained session, the id of which must be provided as a :clone
 kwarg.  Returns the new session's id.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L95" id="var-source">Source</a>
+    
   </div><div id="var-entry">
     <br />
     <hr />
@@ -351,7 +375,7 @@ the result of (read)ing it.  Returns the message unchanged if the :value
 slot is empty or not a string.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L152" id="var-source">Source</a>
+    
   </div><div id="var-entry">
     <br />
     <hr />
@@ -367,7 +391,7 @@ returns nil from `recv`) or if a message takes longer than `timeout`
 millis to arrive.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L19" id="var-source">Source</a>
+    
   </div><div id="var-entry">
     <br />
     <hr />
@@ -380,7 +404,7 @@ by client or client-session), returns a seq of values read from :value slots fou
 therein.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L164" id="var-source">Source</a>
+    
   </div><div id="var-entry">
     <br />
     <hr />
@@ -390,7 +414,7 @@ therein.</pre>
     <pre id="var-docstr">Current version of nREPL, map of :major, :minor, :incremental, and :qualifier.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L237" id="var-source">Source</a>
+    
   </div>
 </div>
 <br />
@@ -424,7 +448,7 @@ Expected usage:
 59872 ; the port of the server started via start-server</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/aa3eba4d5f52eb0fd1644c79b978f5ef456fc001/src/main/clojure/clojure/tools/nrepl/ack.clj#L16" id="var-source">Source</a>
+    
   </div>
 </div>
 <br />
@@ -700,7 +724,57 @@ Requires that results of eval operations are sent in messages in a
 <br />
 
 
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.middleware.session/add-stdin">add-stdin</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (add-stdin h)
+</pre>
+    <pre id="var-docstr">stdin middleware.  Returns a handler that supports a "stdin" :op-eration, which
+adds content provided in a :stdin slot to the session's *in* Reader.  Delegates to
+the given handler for other operations.
 
+Requires the session middleware.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/b9e930a1bfbd9616644aa6f0112769cc233cc61e/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L187" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.middleware.session/session">session</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (session h)
+</pre>
+    <pre id="var-docstr">Session middleware.  Returns a handler which supports these :op-erations:
+
+* "ls-sessions", which results in a response message
+  containing a list of the IDs of the currently-retained sessions in a
+  :session slot.
+* "close", which drops the session indicated by the
+  ID in the :session slot.  The response message's :status will include
+  :session-closed.
+* "clone", which will cause a new session to be retained.  The ID of this
+  new session will be returned in a response message in a :new-session
+  slot.  The new session's state (dynamic scope, etc) will be a copy of
+  the state of the session identified in the :session slot of the request.
+
+Messages indicating other operations are delegated to the given handler,
+with the session identified by the :session ID added to the message. If
+no :session ID is found, a new session is created (which will only
+persist for the duration of the handling of the given message).
+
+Requires the interruptible-eval middleware (specifically, its binding of
+*msg* to the currently-evaluated message so that session-specific *out*
+and *err* content can be associated with the originating message).</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/b9e930a1bfbd9616644aa6f0112769cc233cc61e/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L126" id="var-source">Source</a>
+  </div>
+</div>
 <br />
 <h2 id="clojure.tools.nrepl.misc">clojure.tools.nrepl.misc</h2>
 <pre id="namespace-docstr">Misc utilities used in nREPL's implementation (potentially also useful
@@ -764,8 +838,102 @@ or a string.</pre>
 
 <br />
 
+<div id="type-section">
+  <p></p>
+  <h2>Types</h2>
+  <div id="type-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.server/Server">Server</h2>
+    <span id="type-type">record</span><br />
+    <pre id="type-docstr"></pre>
+    Fields: <span id="type-fields">[server-socket port open-transports transport greeting handler]</span><br />
+    Protocols: <span id="type-protocols"></span><br />
+    Interfaces: <span id="type-interfaces">clojure.lang.IDeref, clojure.lang.IKeywordLookup, clojure.lang.ILookup, clojure.lang.IObj, clojure.lang.IPersistentMap, java.io.Closeable, java.io.Serializable, java.util.Map</span><br />
+  </div>
+</div>
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.server/default-handler">default-handler</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (default-handler &amp; additional-middlewares)
+</pre>
+    <pre id="var-docstr">A default handler supporting interruptible evaluation, stdin, sessions, and
+readable representations of evaluated expressions via `pr`.
 
+Additional middlewares to mix into the default stack may be provided; these
+should all be values (usually vars) that have an nREPL middleware descriptor
+in their metadata (see clojure.tools.nrepl.middleware/set-descriptor!).</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L79" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.server/handle">handle</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (handle handler transport)
+</pre>
+    <pre id="var-docstr">Handles requests received via [transport] using [handler].
+Returns nil when [recv] returns nil for the given transport.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L22" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.server/start-server">start-server</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (start-server &amp; {:keys [port bind transport-fn handler ack-port greeting-fn], :or {port 0}})
+</pre>
+    <pre id="var-docstr">Starts a socket-based nREPL server.  Configuration options include:
 
+  * :port — defaults to 0, which autoselects an open port on localhost
+  * :bind — bind address, by default any (0.0.0.0)
+  * :handler — the nREPL message handler to use for each incoming connection;
+      defaults to the result of `(default-handler)`
+  * :transport-fn — a function that, given a java.net.Socket corresponding
+      to an incoming connection, will return an value satisfying the
+      clojure.tools.nrepl.Transport protocol for that Socket.
+  * :ack-port — if specified, the port of an already-running server
+      that will be connected to to inform of the new server's port.
+      Useful only by Clojure tooling implementations.
+
+  Returns a (map) handle to the server that is started, which may be stopped
+  either via `stop-server`, (.close server), or automatically via `with-open`.
+  The port that the server is open on is available in the :port slot of the
+  server map (useful if the :port option is 0 or was left unspecified.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L114" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.server/stop-server">stop-server</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (stop-server {:keys [open-transports server-socket], :as server})
+</pre>
+    <pre id="var-docstr">Stops a server started via `start-server`.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L52" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.server/unknown-op">unknown-op</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (unknown-op {:keys [op transport], :as msg})
+</pre>
+    <pre id="var-docstr">Sends an :unknown-op :error for the given message.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L67" id="var-source">Source</a>
+  </div>
+</div>
 <br />
 <h2 id="clojure.tools.nrepl.transport">clojure.tools.nrepl.transport</h2>
 <pre id="namespace-docstr"></pre>
@@ -914,7 +1082,7 @@ to the server, but telnet et al. isn't that.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;" id="copyright">Copyright 2007-2012 by Rich Hickey and the various contributors</div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2013 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

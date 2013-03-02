@@ -77,7 +77,7 @@
    :doc
    "Misc utilities used in nREPL's implementation (potentially also useful\nfor anyone extending it)."}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/2124e1399097a4b43af76c1ed9602d22f42f37d5/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.server-api.html",
    :name "clojure.tools.nrepl.server",
@@ -94,165 +94,141 @@
  ({:arglists ([transport response-timeout]),
    :name "client",
    :namespace "clojure.tools.nrepl",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L29",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj",
+   :source-url nil,
+   :raw-source-url nil,
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/client",
    :doc
    "Returns a fn of zero and one argument, both of which return the current head of a single\nresponse-seq being read off of the given client-side transport.  The one-arg arity will\nsend a given message on the transport before returning the seq.\n\nMost REPL interactions are best performed via `message` and `client-session` on top of\na client fn returned from this fn.",
    :var-type "function",
    :line 29,
-   :file "src/main/clojure/clojure/tools/nrepl.clj"}
+   :file "target/classes/clojure/tools/nrepl.clj"}
   {:arglists ([client & {:keys [session clone]}]),
    :name "client-session",
    :namespace "clojure.tools.nrepl",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L105",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj",
+   :source-url nil,
+   :raw-source-url nil,
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/client-session",
    :doc
    "Returns a function of one argument.  Accepts a message that is sent via the\nclient provided with a fixed :session id added to it.  Returns the\nhead of the client's response seq, filtered to include only\nmessages related to the :session id that will terminate when the session is\nclosed.",
    :var-type "function",
    :line 105,
-   :file "src/main/clojure/clojure/tools/nrepl.clj"}
+   :file "target/classes/clojure/tools/nrepl.clj"}
   {:arglists ([& body]),
    :name "code",
    :namespace "clojure.tools.nrepl",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L143",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj",
+   :source-url nil,
+   :raw-source-url nil,
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/code",
    :doc
    "Expands into a string consisting of the macro's body's forms\n(literally, no interpolation/quasiquoting of locals or other\nreferences), suitable for use in an :eval message, e.g.:\n\n{:op :eval, :code (code (+ 1 1) (slurp \"foo.txt\"))}",
    :var-type "macro",
    :line 143,
-   :file "src/main/clojure/clojure/tools/nrepl.clj"}
+   :file "target/classes/clojure/tools/nrepl.clj"}
   {:arglists ([& expressions]),
    :name "code*",
    :namespace "clojure.tools.nrepl",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L137",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj",
+   :source-url nil,
+   :raw-source-url nil,
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/code*",
    :doc
    "Returns a single string containing the pr-str'd representations\nof the given expressions.",
    :var-type "function",
    :line 137,
-   :file "src/main/clojure/clojure/tools/nrepl.clj"}
+   :file "target/classes/clojure/tools/nrepl.clj"}
   {:arglists ([responses]),
    :name "combine-responses",
    :namespace "clojure.tools.nrepl",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L115",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj",
+   :source-url nil,
+   :raw-source-url nil,
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/combine-responses",
    :doc
    "Combines the provided seq of response messages into a single response map.\n\nCertain message slots are combined in special ways:\n\n  - only the last :ns is retained\n  - :value is accumulated into an ordered collection\n  - :status and :session are accumulated into a set\n  - string values (associated with e.g. :out and :err) are concatenated",
    :var-type "function",
    :line 115,
-   :file "src/main/clojure/clojure/tools/nrepl.clj"}
+   :file "target/classes/clojure/tools/nrepl.clj"}
   {:arglists
    ([&
      {:keys [port host transport-fn],
       :or {transport-fn transport/bencode, host "localhost"}}]),
    :name "connect",
    :namespace "clojure.tools.nrepl",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L174",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj",
+   :source-url nil,
+   :raw-source-url nil,
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/connect",
    :doc
    "Connects to a socket-based REPL at the given host (defaults to localhost) and port,\nreturning the Transport (by default clojure.tools.nrepl.transport/bencode)\nfor that connection.\n\nTransports are most easily used with `client`, `client-session`, and\n`message`, depending on the semantics desired.",
    :var-type "function",
    :line 174,
-   :file "src/main/clojure/clojure/tools/nrepl.clj"}
+   :file "target/classes/clojure/tools/nrepl.clj"}
   {:arglists ([client {:keys [id], :as msg, :or {id (uuid)}}]),
    :name "message",
    :namespace "clojure.tools.nrepl",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L86",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj",
+   :source-url nil,
+   :raw-source-url nil,
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/message",
    :doc
    "Sends a message via [client] with a fixed message :id added to it.\nReturns the head of the client's response seq, filtered to include only\nmessages related to the message :id that will terminate upon receipt of a\n\"done\" :status.",
    :var-type "function",
    :line 86,
-   :file "src/main/clojure/clojure/tools/nrepl.clj"}
+   :file "target/classes/clojure/tools/nrepl.clj"}
   {:arglists ([client & {:keys [clone]}]),
    :name "new-session",
    :namespace "clojure.tools.nrepl",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L95",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj",
+   :source-url nil,
+   :raw-source-url nil,
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/new-session",
    :doc
    "Provokes the creation and retention of a new session, optionally as a clone\nof an existing retained session, the id of which must be provided as a :clone\nkwarg.  Returns the new session's id.",
    :var-type "function",
    :line 95,
-   :file "src/main/clojure/clojure/tools/nrepl.clj"}
+   :file "target/classes/clojure/tools/nrepl.clj"}
   {:arglists ([{:keys [value], :as msg}]),
    :name "read-response-value",
    :namespace "clojure.tools.nrepl",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L152",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj",
+   :source-url nil,
+   :raw-source-url nil,
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/read-response-value",
    :doc
    "Returns the provided response message, replacing its :value string with\nthe result of (read)ing it.  Returns the message unchanged if the :value\nslot is empty or not a string.",
    :var-type "function",
    :line 152,
-   :file "src/main/clojure/clojure/tools/nrepl.clj"}
+   :file "target/classes/clojure/tools/nrepl.clj"}
   {:arglists ([transport] [transport timeout]),
    :name "response-seq",
    :namespace "clojure.tools.nrepl",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L19",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj",
+   :source-url nil,
+   :raw-source-url nil,
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/response-seq",
    :doc
    "Returns a lazy seq of messages received via the given Transport.\nCalled with no further arguments, will block waiting for each message.\nThe seq will end only when the underlying Transport is closed (i.e.\nreturns nil from `recv`) or if a message takes longer than `timeout`\nmillis to arrive.",
    :var-type "function",
    :line 19,
-   :file "src/main/clojure/clojure/tools/nrepl.clj"}
+   :file "target/classes/clojure/tools/nrepl.clj"}
   {:arglists ([responses]),
    :name "response-values",
    :namespace "clojure.tools.nrepl",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L164",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj",
+   :source-url nil,
+   :raw-source-url nil,
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/response-values",
    :doc
    "Given a seq of responses (as from response-seq or returned from any function returned\nby client or client-session), returns a seq of values read from :value slots found\ntherein.",
    :var-type "function",
    :line 164,
-   :file "src/main/clojure/clojure/tools/nrepl.clj"}
-  {:file "src/main/clojure/clojure/tools/nrepl.clj",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L237",
+   :file "target/classes/clojure/tools/nrepl.clj"}
+  {:file "target/classes/clojure/tools/nrepl.clj",
+   :raw-source-url nil,
+   :source-url nil,
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/version",
    :namespace "clojure.tools.nrepl",
@@ -264,17 +240,15 @@
   {:arglists ([timeout]),
    :name "wait-for-ack",
    :namespace "clojure.tools.nrepl.ack",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/aa3eba4d5f52eb0fd1644c79b978f5ef456fc001/src/main/clojure/clojure/tools/nrepl/ack.clj#L16",
-   :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/aa3eba4d5f52eb0fd1644c79b978f5ef456fc001/src/main/clojure/clojure/tools/nrepl/ack.clj",
+   :source-url nil,
+   :raw-source-url nil,
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.ack/wait-for-ack",
    :doc
    "Waits for a presumably just-launched nREPL server to connect and\ndeliver its port number.  Returns that number if it's delivered\nwithin `timeout` ms, otherwise nil.  Assumes that `ack`\nmiddleware has been applied to the local nREPL server handler.\n\nExpected usage:\n\n(reset-ack-port!)\n(start-server already-running-server-port)\n=> (wait-for-ack)\n59872 ; the port of the server started via start-server",
    :var-type "function",
    :line 16,
-   :file "src/main/clojure/clojure/tools/nrepl/ack.clj"}
+   :file "target/classes/clojure/tools/nrepl/ack.clj"}
   {:arglists ([input]),
    :name "read-bencode",
    :namespace "clojure.tools.nrepl.bencode",
@@ -435,6 +409,34 @@
    :line 8,
    :file
    "src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj"}
+  {:arglists ([h]),
+   :name "add-stdin",
+   :namespace "clojure.tools.nrepl.middleware.session",
+   :source-url
+   "https://github.com/clojure/tools.nrepl/blob/b9e930a1bfbd9616644aa6f0112769cc233cc61e/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L187",
+   :raw-source-url
+   "https://github.com/clojure/tools.nrepl/raw/b9e930a1bfbd9616644aa6f0112769cc233cc61e/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.session/add-stdin",
+   :doc
+   "stdin middleware.  Returns a handler that supports a \"stdin\" :op-eration, which\nadds content provided in a :stdin slot to the session's *in* Reader.  Delegates to\nthe given handler for other operations.\n\nRequires the session middleware.",
+   :var-type "function",
+   :line 187,
+   :file "src/main/clojure/clojure/tools/nrepl/middleware/session.clj"}
+  {:arglists ([h]),
+   :name "session",
+   :namespace "clojure.tools.nrepl.middleware.session",
+   :source-url
+   "https://github.com/clojure/tools.nrepl/blob/b9e930a1bfbd9616644aa6f0112769cc233cc61e/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L126",
+   :raw-source-url
+   "https://github.com/clojure/tools.nrepl/raw/b9e930a1bfbd9616644aa6f0112769cc233cc61e/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.session/session",
+   :doc
+   "Session middleware.  Returns a handler which supports these :op-erations:\n\n* \"ls-sessions\", which results in a response message\n  containing a list of the IDs of the currently-retained sessions in a\n  :session slot.\n* \"close\", which drops the session indicated by the\n  ID in the :session slot.  The response message's :status will include\n  :session-closed.\n* \"clone\", which will cause a new session to be retained.  The ID of this\n  new session will be returned in a response message in a :new-session\n  slot.  The new session's state (dynamic scope, etc) will be a copy of\n  the state of the session identified in the :session slot of the request.\n\nMessages indicating other operations are delegated to the given handler,\nwith the session identified by the :session ID added to the message. If\nno :session ID is found, a new session is created (which will only\npersist for the duration of the handling of the given message).\n\nRequires the interruptible-eval middleware (specifically, its binding of\n*msg* to the currently-evaluated message so that session-specific *out*\nand *err* content can be associated with the originating message).",
+   :var-type "function",
+   :line 126,
+   :file "src/main/clojure/clojure/tools/nrepl/middleware/session.clj"}
   {:arglists ([{:keys [session id]} & response-data]),
    :name "response-for",
    :namespace "clojure.tools.nrepl.misc",
@@ -475,6 +477,85 @@
    :var-type "function",
    :line 24,
    :file "src/main/clojure/clojure/tools/nrepl/misc.clj"}
+  {:arglists ([& additional-middlewares]),
+   :name "default-handler",
+   :namespace "clojure.tools.nrepl.server",
+   :source-url
+   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L79",
+   :raw-source-url
+   "https://github.com/clojure/tools.nrepl/raw/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/default-handler",
+   :doc
+   "A default handler supporting interruptible evaluation, stdin, sessions, and\nreadable representations of evaluated expressions via `pr`.\n\nAdditional middlewares to mix into the default stack may be provided; these\nshould all be values (usually vars) that have an nREPL middleware descriptor\nin their metadata (see clojure.tools.nrepl.middleware/set-descriptor!).",
+   :var-type "function",
+   :line 79,
+   :file "src/main/clojure/clojure/tools/nrepl/server.clj"}
+  {:arglists ([handler transport]),
+   :name "handle",
+   :namespace "clojure.tools.nrepl.server",
+   :source-url
+   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L22",
+   :raw-source-url
+   "https://github.com/clojure/tools.nrepl/raw/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/handle",
+   :doc
+   "Handles requests received via [transport] using [handler].\nReturns nil when [recv] returns nil for the given transport.",
+   :var-type "function",
+   :line 22,
+   :file "src/main/clojure/clojure/tools/nrepl/server.clj"}
+  {:arglists
+   ([&
+     {:keys [port bind transport-fn handler ack-port greeting-fn],
+      :or {port 0}}]),
+   :name "start-server",
+   :namespace "clojure.tools.nrepl.server",
+   :source-url
+   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L114",
+   :raw-source-url
+   "https://github.com/clojure/tools.nrepl/raw/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/start-server",
+   :doc
+   "Starts a socket-based nREPL server.  Configuration options include:\n\n  * :port — defaults to 0, which autoselects an open port on localhost\n  * :bind — bind address, by default any (0.0.0.0)\n  * :handler — the nREPL message handler to use for each incoming connection;\n      defaults to the result of `(default-handler)`\n  * :transport-fn — a function that, given a java.net.Socket corresponding\n      to an incoming connection, will return an value satisfying the\n      clojure.tools.nrepl.Transport protocol for that Socket.\n  * :ack-port — if specified, the port of an already-running server\n      that will be connected to to inform of the new server's port.\n      Useful only by Clojure tooling implementations.\n\n  Returns a (map) handle to the server that is started, which may be stopped\n  either via `stop-server`, (.close server), or automatically via `with-open`.\n  The port that the server is open on is available in the :port slot of the\n  server map (useful if the :port option is 0 or was left unspecified.",
+   :var-type "function",
+   :line 114,
+   :file "src/main/clojure/clojure/tools/nrepl/server.clj"}
+  {:arglists ([{:keys [open-transports server-socket], :as server}]),
+   :name "stop-server",
+   :namespace "clojure.tools.nrepl.server",
+   :source-url
+   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L52",
+   :raw-source-url
+   "https://github.com/clojure/tools.nrepl/raw/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/stop-server",
+   :doc "Stops a server started via `start-server`.",
+   :var-type "function",
+   :line 52,
+   :file "src/main/clojure/clojure/tools/nrepl/server.clj"}
+  {:arglists ([{:keys [op transport], :as msg}]),
+   :name "unknown-op",
+   :namespace "clojure.tools.nrepl.server",
+   :source-url
+   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L67",
+   :raw-source-url
+   "https://github.com/clojure/tools.nrepl/raw/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/unknown-op",
+   :doc "Sends an :unknown-op :error for the given message.",
+   :var-type "function",
+   :line 67,
+   :file "src/main/clojure/clojure/tools/nrepl/server.clj"}
+  {:file nil,
+   :raw-source-url nil,
+   :source-url nil,
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/Server",
+   :namespace "clojure.tools.nrepl.server",
+   :var-type "record",
+   :name "Server"}
   {:arglists ([s] [in out & [s]]),
    :name "bencode",
    :namespace "clojure.tools.nrepl.transport",
