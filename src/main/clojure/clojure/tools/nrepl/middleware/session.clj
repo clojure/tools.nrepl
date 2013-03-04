@@ -82,11 +82,11 @@
 (defn- create-session
   "Returns a new atom containing a map of bindings as per
    `clojure.core/get-thread-bindings`.  Values for *out*, *err*, and *in*
-   are obtained using `session-in` and `session-out`, *ns* defaults to 'user,
-   and other bindings as optionally provided in `baseline-bindings` are
-   merged in."
-  ([transport] (create-session transport {}))
-  ([transport baseline-bindings]
+   are obtained using `session-in` and `session-out`, *ns* is specified by
+   ns (a symbol), and other bindings as optionally provided in
+  `baseline-bindings`are merged in."
+  ([transport ns] (create-session transport ns {}))
+  ([transport ns baseline-bindings]
     (clojure.main/with-bindings
       (let [id (uuid)
             out (session-out :out id transport)
@@ -94,7 +94,7 @@
         (binding [*out* out
                   *err* (session-out :err id transport)
                   *in* in
-                  *ns* (create-ns 'user)
+                  *ns* (create-ns ns)
                   *out-limit* (or (baseline-bindings #'*out-limit*) 1024)
                   ; clojure.test captures *out* at load-time, so we need to make sure
                   ; runtime output of test status/results is redirected properly
@@ -110,9 +110,10 @@
 
 (defn- register-session
   "Registers a new session containing the baseline bindings contained in the
-   given message's :session."
-  [{:keys [session transport] :as msg}]
-  (let [session (create-session transport @session)
+   given message's :session. The new session's *ns* binding is specified by
+   ns (as a symbol)."
+  [{:keys [session transport] :as msg} ns]
+  (let [session (create-session transport ns @session)
         id (-> session meta :id)]
     (swap! sessions assoc id session)
     (t/send transport (response-for msg :status :done :new-session id))))
@@ -144,12 +145,15 @@
 
    Requires the interruptible-eval middleware (specifically, its binding of
    *msg* to the currently-evaluated message so that session-specific *out*
-   and *err* content can be associated with the originating message)."
-  [h]
+   and *err* content can be associated with the originating message).
+
+   Accepts an optional named argument :init-ns (a symbol), which specifies
+   the initial *ns* binding for the session. The default value is 'user."
+  [h & {:keys [init-ns] :or {init-ns 'user}}]
   (fn [{:keys [op session transport out-limit] :as msg}]
     (let [the-session (if session
                         (@sessions session)
-                        (create-session transport))]
+                        (create-session transport init-ns))]
       (if-not the-session
         (t/send transport (response-for msg :status #{:error :unknown-session}))
         (let [msg (assoc msg :session the-session)]
@@ -159,7 +163,7 @@
           ;; a session-out's "buffer")
           (when out-limit (swap! the-session assoc #'*out-limit* out-limit))
           (case op
-            "clone" (register-session msg)
+            "clone" (register-session msg init-ns)
             "close" (close-session msg)
             "ls-sessions" (t/send transport (response-for msg :status :done
                                                               :sessions (or (keys @sessions) [])))
