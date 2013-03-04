@@ -87,6 +87,9 @@ namespace.
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl/response-values">response-values</a>
       
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl/url-connect">url-connect</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl/version">version</a>
       
     </div>
@@ -177,10 +180,16 @@ namespace.
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.server/Server">Server</a>
       
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.server/-&gt;Server">-&gt;Server</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.server/default-handler">default-handler</a>
       
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.server/handle">handle</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.server/map-&gt;Server">map-&gt;Server</a>
       
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.server/start-server">start-server</a>
@@ -206,6 +215,12 @@ namespace.
       
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.transport/QueueTransport">QueueTransport</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.transport/-&gt;FnTransport">-&gt;FnTransport</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.transport/-&gt;QueueTransport">-&gt;QueueTransport</a>
       
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.transport/bencode">bencode</a>
@@ -405,6 +420,28 @@ therein.</pre>
     
     
     <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L164" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl/url-connect">url-connect</h2>
+    <span id="var-type">var</span><br />
+    <pre id="var-usage"></pre>
+    <pre id="var-docstr">Connects to an nREPL endpoint identified by the given URL/URI.  Valid
+examples include:
+
+   nrepl://192.168.0.12:7889
+   telnet://localhost:5000
+   <a href="http://your-app-name.heroku.com/repl">http://your-app-name.heroku.com/repl</a>
+
+This is a multimethod that dispatches on the scheme of the URI provided
+(which can be a string or java.net.URI).  By default, implementations for
+nrepl (corresponding to using the default bencode transport) and
+telnet (using the clojure.tools.nrepl.transport/tty transport) are
+registered.  Alternative implementations may add support for other schemes,
+such as HTTP, HTTPS, JMX, existing message queues, etc.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/a22aaeec88ed560a728eb7126650a59fcabf8265/src/main/clojure/clojure/tools/nrepl.clj#L203" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -849,13 +886,24 @@ or a string.</pre>
     <pre id="type-docstr"></pre>
     Fields: <span id="type-fields">[server-socket port open-transports transport greeting handler]</span><br />
     Protocols: <span id="type-protocols"></span><br />
-    Interfaces: <span id="type-interfaces">clojure.lang.IDeref, clojure.lang.IKeywordLookup, clojure.lang.ILookup, clojure.lang.IObj, clojure.lang.IPersistentMap, java.io.Closeable, java.io.Serializable, java.util.Map</span><br />
+    Interfaces: <span id="type-interfaces">clojure.lang.IDeref, clojure.lang.IHashEq, clojure.lang.IKeywordLookup, clojure.lang.ILookup, clojure.lang.IObj, clojure.lang.IPersistentMap, java.io.Closeable, java.io.Serializable, java.util.Map</span><br />
   </div>
 </div>
 <div id="var-section">
   <p></p>
   <h2>Public Variables and Functions</h2>
   <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.server/-&gt;Server">-&gt;Server</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (-&gt;Server server-socket port open-transports transport greeting handler)
+</pre>
+    <pre id="var-docstr">Positional factory function for class clojure.tools.nrepl.server.Server.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L100" id="var-source">Source</a>
+  </div><div id="var-entry">
     <br />
     <hr />
     <h2 id="clojure.tools.nrepl.server/default-handler">default-handler</h2>
@@ -883,6 +931,17 @@ Returns nil when [recv] returns nil for the given transport.</pre>
     
     
     <a href="https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L22" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.server/map-&gt;Server">map-&gt;Server</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (map-&gt;Server m__5828__auto__)
+</pre>
+    <pre id="var-docstr">Factory function for class clojure.tools.nrepl.server.Server, taking a map of keywords to field values.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L100" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -1007,6 +1066,28 @@ ms or if the underlying channel has been closed.</pre>
   <p></p>
   <h2>Public Variables and Functions</h2>
   <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.transport/-&gt;FnTransport">-&gt;FnTransport</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (-&gt;FnTransport recv-fn send-fn close)
+</pre>
+    <pre id="var-docstr">Positional factory function for class clojure.tools.nrepl.transport.FnTransport.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L25" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.transport/-&gt;QueueTransport">-&gt;QueueTransport</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (-&gt;QueueTransport in out)
+</pre>
+    <pre id="var-docstr">Positional factory function for class clojure.tools.nrepl.transport.QueueTransport.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L156" id="var-source">Source</a>
+  </div><div id="var-entry">
     <br />
     <hr />
     <h2 id="clojure.tools.nrepl.transport/bencode">bencode</h2>
