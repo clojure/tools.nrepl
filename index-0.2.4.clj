@@ -257,7 +257,7 @@
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl/url-connect",
    :namespace "clojure.tools.nrepl",
    :line 203,
-   :var-type "var",
+   :var-type "multimethod",
    :doc
    "Connects to an nREPL endpoint identified by the given URL/URI.  Valid\nexamples include:\n\n   nrepl://192.168.0.12:7889\n   telnet://localhost:5000\n   http://your-app-name.heroku.com/repl\n\nThis is a multimethod that dispatches on the scheme of the URI provided\n(which can be a string or java.net.URI).  By default, implementations for\nnrepl (corresponding to using the default bencode transport) and\ntelnet (using the clojure.tools.nrepl.transport/tty transport) are\nregistered.  Alternative implementations may add support for other schemes,\nsuch as HTTP, HTTPS, JMX, existing message queues, etc.",
    :name "url-connect"}
@@ -315,6 +315,19 @@
    :var-type "function",
    :line 157,
    :file "src/main/clojure/clojure/tools/nrepl/bencode.clj"}
+  {:file "src/main/clojure/clojure/tools/nrepl/bencode.clj",
+   :raw-source-url
+   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj",
+   :source-url
+   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj#L305",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.bencode/write-bencode",
+   :namespace "clojure.tools.nrepl.bencode",
+   :line 305,
+   :var-type "multimethod",
+   :doc
+   "Write the given thing to the output stream. “Thing” means here a\nstring, map, sequence or integer. Alternatively an ByteArray may\nbe provided whose contents are written as a bytestring. Similar\nthe contents of a given InputStream are written as a byte string.\nNamed things (symbols or keywords) are written in the form\n'namespace/name'.",
+   :name "write-bencode"}
   {:arglists ([output content]),
    :name "write-netstring",
    :namespace "clojure.tools.nrepl.bencode",

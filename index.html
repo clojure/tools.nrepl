@@ -108,6 +108,9 @@ namespace.
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.bencode/read-netstring">read-netstring</a>
       
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.bencode/write-bencode">write-bencode</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.bencode/write-netstring">write-netstring</a>
       
     </div>
@@ -424,8 +427,8 @@ therein.</pre>
     <br />
     <hr />
     <h2 id="clojure.tools.nrepl/url-connect">url-connect</h2>
-    <span id="var-type">var</span><br />
-    <pre id="var-usage"></pre>
+    <span id="var-type">multimethod</span><br />
+    <pre id="var-usage">No usage documentation available</pre>
     <pre id="var-docstr">Connects to an nREPL endpoint identified by the given URL/URI.  Valid
 examples include:
 
@@ -522,6 +525,21 @@ contained binary data as byte array.</pre>
     
     
     <a href="https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj#L157" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.bencode/write-bencode">write-bencode</h2>
+    <span id="var-type">multimethod</span><br />
+    <pre id="var-usage">No usage documentation available</pre>
+    <pre id="var-docstr">Write the given thing to the output stream. “Thing” means here a
+string, map, sequence or integer. Alternatively an ByteArray may
+be provided whose contents are written as a bytestring. Similar
+the contents of a given InputStream are written as a byte string.
+Named things (symbols or keywords) are written in the form
+'namespace/name'.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/bencode.clj#L305" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
