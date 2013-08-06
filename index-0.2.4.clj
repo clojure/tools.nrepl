@@ -35,13 +35,13 @@
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/c0f266d7399a82b8c2d143af19d1d167b578f914/src/main/clojure/clojure/tools/nrepl/middleware.clj",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware-api.html",
    :name "clojure.tools.nrepl.middleware",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.interruptible-eval-api.html",
    :name "clojure.tools.nrepl.middleware.interruptible-eval",
@@ -62,7 +62,7 @@
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/3cd3d0e8b2091fc70fde1587d3f0a995cbf8b283/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.session-api.html",
    :name "clojure.tools.nrepl.middleware.session",
@@ -77,7 +77,7 @@
    :doc
    "Misc utilities used in nREPL's implementation (potentially also useful\nfor anyone extending it)."}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.server-api.html",
    :name "clojure.tools.nrepl.server",
@@ -360,9 +360,9 @@
    :name "set-descriptor!",
    :namespace "clojure.tools.nrepl.middleware",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/c0f266d7399a82b8c2d143af19d1d167b578f914/src/main/clojure/clojure/tools/nrepl/middleware.clj#L19",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware.clj#L19",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/c0f266d7399a82b8c2d143af19d1d167b578f914/src/main/clojure/clojure/tools/nrepl/middleware.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware/set-descriptor!",
    :doc
@@ -373,10 +373,10 @@
   {:name "*msg*",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L14",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L14",
    :dynamic true,
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/*msg*",
    :doc "The message currently being evaluated.",
@@ -388,9 +388,9 @@
    :name "evaluate",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L18",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L18",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/evaluate",
    :doc
@@ -404,15 +404,15 @@
    :name "interruptible-eval",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L153",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L154",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/interruptible-eval",
    :doc
    "Evaluation middleware that supports interrupts.  Returns a handler that supports\n\"eval\" and \"interrupt\" :op-erations that delegates to the given handler\notherwise.",
    :var-type "function",
-   :line 153,
+   :line 154,
    :file
    "src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj"}
   {:arglists ([file file-path file-name]),
@@ -465,9 +465,9 @@
    :name "add-stdin",
    :namespace "clojure.tools.nrepl.middleware.session",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/3cd3d0e8b2091fc70fde1587d3f0a995cbf8b283/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L213",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L213",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/3cd3d0e8b2091fc70fde1587d3f0a995cbf8b283/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.session/add-stdin",
    :doc
@@ -479,9 +479,9 @@
    :name "session",
    :namespace "clojure.tools.nrepl.middleware.session",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/3cd3d0e8b2091fc70fde1587d3f0a995cbf8b283/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L152",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L152",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/3cd3d0e8b2091fc70fde1587d3f0a995cbf8b283/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.session/session",
    :doc
@@ -534,9 +534,9 @@
    :name "->Server",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L100",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj#L100",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/->Server",
    :doc
@@ -548,9 +548,9 @@
    :name "default-handler",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L79",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj#L79",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/default-handler",
    :doc
@@ -562,9 +562,9 @@
    :name "handle",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L22",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj#L22",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/handle",
    :doc
@@ -576,9 +576,9 @@
    :name "map->Server",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L100",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj#L100",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/map->Server",
    :doc
@@ -593,9 +593,9 @@
    :name "start-server",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L114",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj#L114",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/start-server",
    :doc
@@ -607,9 +607,9 @@
    :name "stop-server",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L52",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj#L52",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/stop-server",
    :doc "Stops a server started via `start-server`.",
@@ -620,9 +620,9 @@
    :name "unknown-op",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj#L67",
+   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj#L67",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/0f016eb7a58a2506067e5ffab82033dac2af9f5a/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/unknown-op",
    :doc "Sends an :unknown-op :error for the given message.",
