@@ -30,53 +30,59 @@
 
    It is assumed that `bindings` already contains useful/appropriate entries
    for all vars indicated by `clojure.main/with-bindings`."
-  [bindings {:keys [code ns transport] :as msg}]
+  [bindings {:keys [code ns transport context-classloader] :as msg}]
   (let [explicit-ns-binding (when-let [ns (and ns (-> ns symbol find-ns))]
                               {#'*ns* ns})
         bindings (atom (merge bindings explicit-ns-binding))
         out (@bindings #'*out*)
-        err (@bindings #'*err*)]
+        err (@bindings #'*err*)
+        incumbent-ccl (.getContextClassLoader (Thread/currentThread))]
+
     (if (and ns (not explicit-ns-binding))
       (t/send transport (response-for msg {:status #{:error :namespace-not-found :done}}))
       (with-bindings @bindings
+        (when context-classloader
+          (.setContextClassLoader (Thread/currentThread) context-classloader))
         (try
           (clojure.main/repl
-            ;; clojure.main/repl paves over certain vars even if they're already thread-bound
-            :init #(do (set! *compile-path* (@bindings #'*compile-path*))
-                     (set! *1 (@bindings #'*1))
-                     (set! *2 (@bindings #'*2))
-                     (set! *3 (@bindings #'*3))
-                     (set! *e (@bindings #'*e)))   
-            :read (if (string? code)
-                    (let [reader (LineNumberingPushbackReader. (StringReader. code))]
-                      #(read reader false %2))
-                    (let [code (.iterator ^Iterable code)]
-                      #(or (and (.hasNext code) (.next code)) %2)))
-            :prompt (fn [])
-            :need-prompt (constantly false)
-            ; TODO pretty-print?
-            :print (fn [v]
-                     (reset! bindings (assoc (get-thread-bindings)
-                                             #'*3 *2
-                                             #'*2 *1
-                                             #'*1 v))
-                     (.flush ^Writer err)
-                     (.flush ^Writer out)
-                     (t/send transport (response-for msg
-                                                     {:value v
-                                                      :ns (-> *ns* ns-name str)})))
-            ; TODO customizable exception prints
-            :caught (fn [e]
-                      (let [root-ex (#'clojure.main/root-cause e)]
-                        (when-not (instance? ThreadDeath root-ex)
-                          (reset! bindings (assoc (get-thread-bindings) #'*e e))
-                          (t/send transport (response-for msg {:status :eval-error
-                                                               :ex (-> e class str)
-                                                               :root-ex (-> root-ex class str)}))
-                          (clojure.main/repl-caught e)))))
+           ;; clojure.main/repl paves over certain vars even if they're already thread-bound
+           :init #(do (set! *compile-path* (@bindings #'*compile-path*))
+                      (set! *1 (@bindings #'*1))
+                      (set! *2 (@bindings #'*2))
+                      (set! *3 (@bindings #'*3))
+                      (set! *e (@bindings #'*e)))
+          :read (if (string? code)
+                   (let [reader (LineNumberingPushbackReader. (StringReader. code))]
+                     #(read reader false %2))
+                   (let [code (.iterator ^Iterable code)]
+                     #(or (and (.hasNext code) (.next code)) %2)))
+           :prompt (fn [])
+           :need-prompt (constantly false)
+                                        ; TODO pretty-print?
+           :print (fn [v]
+                    (reset! bindings (assoc (get-thread-bindings)
+                                       #'*3 *2
+                                       #'*2 *1
+                                       #'*1 v))
+                    (.flush ^Writer err)
+                    (.flush ^Writer out)
+                    (t/send transport (response-for msg
+                                                    {:value v
+                                                     :ns (-> *ns* ns-name str)})))
+                                        ; TODO customizable exception prints
+           :caught (fn [e]
+                     (let [root-ex (#'clojure.main/root-cause e)]
+                       (when-not (instance? ThreadDeath root-ex)
+                         (reset! bindings (assoc (get-thread-bindings) #'*e e))
+                         (t/send transport (response-for msg {:status :eval-error
+                                                              :ex (-> e class str)
+                                                              :root-ex (-> root-ex class str)}))
+                         (clojure.main/repl-caught e)))))
           (finally
             (.flush ^Writer out)
-            (.flush ^Writer err)))))
+            (.flush ^Writer err)
+            (when context-classloader
+              (.setContextClassLoader (Thread/currentThread) incumbent-ccl))))))
     @bindings))
 
 (defn- configure-thread-factory
@@ -172,7 +178,7 @@
                 (returning (dissoc (evaluate @session msg) #'*msg*)
                   (t/send transport (response-for msg :status :done))
                   (alter-meta! session dissoc :thread :eval-msg)))))))
-      
+
       "interrupt"
       ; interrupts are inherently racy; we'll check the agent's :eval-msg's :id and
       ; bail if it's different than the one provided, but it's possible for
@@ -191,9 +197,12 @@
                                  :id (:id eval-msg)
                                  :session id})
               (.stop thread)
+              ;; Any context class loader set on the thread will survive
+              ;; when the thread is reclaimed by the thread-pool
+              (.setContextClassLoader thread nil)
               (t/send transport (response-for msg :status #{:done}))))
           (t/send transport (response-for msg :status #{:error :interrupt-id-mismatch :done}))))
-      
+
       (h msg))))
 
 (set-descriptor! #'interruptible-eval
@@ -203,7 +212,8 @@
              {:doc "Evaluates code."
               :requires {"code" "The code to be evaluated."
                          "session" "The ID of the session within which to evaluate the code."}
-              :optional {"id" "An opaque message ID that will be included in responses related to the evaluation, and which may be used to restrict the scope of a later \"interrupt\" operation."}
+              :optional {"id" "An opaque message ID that will be included in responses related to the evaluation, and which may be used to restrict the scope of a later \"interrupt\" operation."
+                         "context-classloader" "The classloader that will be set as the thread's context classloader when evaluating the code."}
               :returns {}}
              "interrupt"
              {:doc "Attempts to interrupt some code evaluation."
