@@ -188,7 +188,7 @@ support e.g. asynchronous evaluation, interrupts, etc.
 
 For more information about the motivation, architecture, use cases, and
 discussion related to nREPL, see the see the original design notes,
-availabl[here](https://docs.google.com/document/edit?id=1dnb1ONTpK9ttO5W4thxiXkU5Ki89gK62anRqKEK4YZI&authkey=CMuszuMI&hl=en#),
+available [here](https://docs.google.com/document/edit?id=1dnb1ONTpK9ttO5W4thxiXkU5Ki89gK62anRqKEK4YZI&authkey=CMuszuMI&hl=en#),
 and the [notes](https://github.com/clojure/tools.nrepl/wiki/nREPL.Next) and
 [discussion](http://groups.google.com/group/clojure-dev/browse_frm/thread/6e366c1d0eaeec59)
 around its recent redesign.
