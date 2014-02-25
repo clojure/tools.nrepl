@@ -55,7 +55,7 @@
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/81580aeed8fdc73e04c926dc2a03dde0ee546ec6/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj",
+   "https://github.com/clojure/tools.nrepl/blob/bbc5e02b665356e7dc33fe1d78346f17b3dec452/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.pr-values-api.html",
    :name "clojure.tools.nrepl.middleware.pr-values",
@@ -450,9 +450,9 @@
    :name "pr-values",
    :namespace "clojure.tools.nrepl.middleware.pr-values",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/81580aeed8fdc73e04c926dc2a03dde0ee546ec6/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj#L8",
+   "https://github.com/clojure/tools.nrepl/blob/bbc5e02b665356e7dc33fe1d78346f17b3dec452/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj#L8",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/81580aeed8fdc73e04c926dc2a03dde0ee546ec6/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj",
+   "https://github.com/clojure/tools.nrepl/raw/bbc5e02b665356e7dc33fe1d78346f17b3dec452/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.pr-values/pr-values",
    :doc
