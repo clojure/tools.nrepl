@@ -77,14 +77,14 @@
    :doc
    "Misc utilities used in nREPL's implementation (potentially also useful\nfor anyone extending it)."}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/eb2f33d0f58e1bad723efe54f54d446f4c95d8bd/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/blob/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.server-api.html",
    :name "clojure.tools.nrepl.server",
    :author "Chas Emerick",
    :doc "Default server implementations"}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/blob/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.transport-api.html",
    :name "clojure.tools.nrepl.transport",
@@ -548,83 +548,100 @@
    :name "->Server",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/eb2f33d0f58e1bad723efe54f54d446f4c95d8bd/src/main/clojure/clojure/tools/nrepl/server.clj#L100",
+   "https://github.com/clojure/tools.nrepl/blob/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj#L101",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/eb2f33d0f58e1bad723efe54f54d446f4c95d8bd/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/->Server",
    :doc
    "Positional factory function for class clojure.tools.nrepl.server.Server.",
    :var-type "function",
-   :line 100,
+   :line 101,
    :file "src/main/clojure/clojure/tools/nrepl/server.clj"}
   {:arglists ([& additional-middlewares]),
    :name "default-handler",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/eb2f33d0f58e1bad723efe54f54d446f4c95d8bd/src/main/clojure/clojure/tools/nrepl/server.clj#L79",
+   "https://github.com/clojure/tools.nrepl/blob/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj#L80",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/eb2f33d0f58e1bad723efe54f54d446f4c95d8bd/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/default-handler",
    :doc
    "A default handler supporting interruptible evaluation, stdin, sessions, and\nreadable representations of evaluated expressions via `pr`.\n\nAdditional middlewares to mix into the default stack may be provided; these\nshould all be values (usually vars) that have an nREPL middleware descriptor\nin their metadata (see clojure.tools.nrepl.middleware/set-descriptor!).",
    :var-type "function",
-   :line 79,
+   :line 80,
    :file "src/main/clojure/clojure/tools/nrepl/server.clj"}
   {:arglists ([handler transport]),
    :name "handle",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/eb2f33d0f58e1bad723efe54f54d446f4c95d8bd/src/main/clojure/clojure/tools/nrepl/server.clj#L22",
+   "https://github.com/clojure/tools.nrepl/blob/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj#L23",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/eb2f33d0f58e1bad723efe54f54d446f4c95d8bd/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/handle",
    :doc
    "Handles requests received via [transport] using [handler].\nReturns nil when [recv] returns nil for the given transport.",
    :var-type "function",
-   :line 22,
+   :line 23,
    :file "src/main/clojure/clojure/tools/nrepl/server.clj"}
   {:arglists ([m__5818__auto__]),
    :name "map->Server",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/eb2f33d0f58e1bad723efe54f54d446f4c95d8bd/src/main/clojure/clojure/tools/nrepl/server.clj#L100",
+   "https://github.com/clojure/tools.nrepl/blob/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj#L101",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/eb2f33d0f58e1bad723efe54f54d446f4c95d8bd/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/map->Server",
    :doc
    "Factory function for class clojure.tools.nrepl.server.Server, taking a map of keywords to field values.",
    :var-type "function",
-   :line 100,
+   :line 101,
+   :file "src/main/clojure/clojure/tools/nrepl/server.clj"}
+  {:arglists
+   ([&
+     {:keys [port bind transport-fn handler ack-port greeting-fn],
+      :or {port 0}}]),
+   :name "start-server",
+   :namespace "clojure.tools.nrepl.server",
+   :source-url
+   "https://github.com/clojure/tools.nrepl/blob/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj#L121",
+   :raw-source-url
+   "https://github.com/clojure/tools.nrepl/raw/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj",
+   :wiki-url
+   "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/start-server",
+   :doc
+   "Starts a socket-based nREPL server.  Configuration options include:\n\n  * :port — defaults to 0, which autoselects an open port on localhost\n  * :bind — bind address, by default any (0.0.0.0)\n  * :handler — the nREPL message handler to use for each incoming connection;\n      defaults to the result of `(default-handler)`\n  * :transport-fn — a function that, given a java.net.Socket corresponding\n      to an incoming connection, will return an value satisfying the\n      clojure.tools.nrepl.Transport protocol for that Socket.\n  * :ack-port — if specified, the port of an already-running server\n      that will be connected to to inform of the new server's port.\n      Useful only by Clojure tooling implementations.\n\n  Returns a (map) handle to the server that is started, which may be stopped\n  either via `stop-server`, (.close server), or automatically via `with-open`.\n  The port that the server is open on is available in the :port slot of the\n  server map (useful if the :port option is 0 or was left unspecified.",
+   :var-type "function",
+   :line 121,
    :file "src/main/clojure/clojure/tools/nrepl/server.clj"}
   {:arglists ([{:keys [open-transports server-socket], :as server}]),
    :name "stop-server",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/eb2f33d0f58e1bad723efe54f54d446f4c95d8bd/src/main/clojure/clojure/tools/nrepl/server.clj#L52",
+   "https://github.com/clojure/tools.nrepl/blob/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj#L53",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/eb2f33d0f58e1bad723efe54f54d446f4c95d8bd/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/stop-server",
    :doc "Stops a server started via `start-server`.",
    :var-type "function",
-   :line 52,
+   :line 53,
    :file "src/main/clojure/clojure/tools/nrepl/server.clj"}
   {:arglists ([{:keys [op transport], :as msg}]),
    :name "unknown-op",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/eb2f33d0f58e1bad723efe54f54d446f4c95d8bd/src/main/clojure/clojure/tools/nrepl/server.clj#L67",
+   "https://github.com/clojure/tools.nrepl/blob/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj#L68",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/eb2f33d0f58e1bad723efe54f54d446f4c95d8bd/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/2a64aef1a9cb3d225ef7881af85b8ccf95652baf/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/unknown-op",
    :doc "Sends an :unknown-op :error for the given message.",
    :var-type "function",
-   :line 67,
+   :line 68,
    :file "src/main/clojure/clojure/tools/nrepl/server.clj"}
   {:file nil,
    :raw-source-url nil,
@@ -638,9 +655,9 @@
    :name "->FnTransport",
    :namespace "clojure.tools.nrepl.transport",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L25",
+   "https://github.com/clojure/tools.nrepl/blob/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj#L25",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/->FnTransport",
    :doc
@@ -652,23 +669,23 @@
    :name "->QueueTransport",
    :namespace "clojure.tools.nrepl.transport",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L156",
+   "https://github.com/clojure/tools.nrepl/blob/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj#L158",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/->QueueTransport",
    :doc
    "Positional factory function for class clojure.tools.nrepl.transport.QueueTransport.",
    :var-type "function",
-   :line 156,
+   :line 158,
    :file "src/main/clojure/clojure/tools/nrepl/transport.clj"}
   {:arglists ([s] [in out & [s]]),
    :name "bencode",
    :namespace "clojure.tools.nrepl.transport",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L87",
+   "https://github.com/clojure/tools.nrepl/blob/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj#L87",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/bencode",
    :doc
@@ -680,9 +697,9 @@
    :name "fn-transport",
    :namespace "clojure.tools.nrepl.transport",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L34",
+   "https://github.com/clojure/tools.nrepl/blob/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj#L34",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/fn-transport",
    :doc
@@ -694,43 +711,43 @@
    :name "piped-transports",
    :namespace "clojure.tools.nrepl.transport",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L162",
+   "https://github.com/clojure/tools.nrepl/blob/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj#L164",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/piped-transports",
    :doc
    "Returns a pair of Transports that read from and write to each other.",
    :var-type "function",
-   :line 162,
+   :line 164,
    :file "src/main/clojure/clojure/tools/nrepl/transport.clj"}
   {:arglists ([s] [in out & [s]]),
    :name "tty",
    :namespace "clojure.tools.nrepl.transport",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L111",
+   "https://github.com/clojure/tools.nrepl/blob/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj#L113",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/tty",
    :doc
    "Returns a Transport implementation suitable for serving an nREPL backend\nvia simple in/out readers, as with a tty or telnet connection.",
    :var-type "function",
-   :line 111,
+   :line 113,
    :file "src/main/clojure/clojure/tools/nrepl/transport.clj"}
   {:arglists ([transport]),
    :name "tty-greeting",
    :namespace "clojure.tools.nrepl.transport",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L145",
+   "https://github.com/clojure/tools.nrepl/blob/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj#L147",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/tty-greeting",
    :doc
    "A greeting fn usable with clojure.tools.nrepl.server/start-server,\nmeant to be used in conjunction with Transports returned by the\n`tty` function.\n\nUsually, Clojure-aware client-side tooling would provide this upon connecting\nto the server, but telnet et al. isn't that.",
    :var-type "function",
-   :line 145,
+   :line 147,
    :file "src/main/clojure/clojure/tools/nrepl/transport.clj"}
   {:file nil,
    :raw-source-url nil,
@@ -750,9 +767,9 @@
    :name "QueueTransport"}
   {:file "src/main/clojure/clojure/tools/nrepl/transport.clj",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj",
+   "https://github.com/clojure/tools.nrepl/raw/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/14d6e683930ba03ef4781cfc5ff6b37e9fbb74cf/src/main/clojure/clojure/tools/nrepl/transport.clj#L16",
+   "https://github.com/clojure/tools.nrepl/blob/9c41e346053d6c3dbd7ae127b37b6582f894e9d2/src/main/clojure/clojure/tools/nrepl/transport.clj#L16",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.transport/Transport",
    :namespace "clojure.tools.nrepl.transport",
