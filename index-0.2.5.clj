@@ -35,7 +35,7 @@
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/cb7ce4140e8aa42736a90c59e2a50808a5c93b61/src/main/clojure/clojure/tools/nrepl/middleware.clj",
+   "https://github.com/clojure/tools.nrepl/blob/0679ab617d9f51ff9e2137411d181ab2825c784a/src/main/clojure/clojure/tools/nrepl/middleware.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware-api.html",
    :name "clojure.tools.nrepl.middleware",
@@ -360,9 +360,9 @@
    :name "set-descriptor!",
    :namespace "clojure.tools.nrepl.middleware",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/cb7ce4140e8aa42736a90c59e2a50808a5c93b61/src/main/clojure/clojure/tools/nrepl/middleware.clj#L19",
+   "https://github.com/clojure/tools.nrepl/blob/0679ab617d9f51ff9e2137411d181ab2825c784a/src/main/clojure/clojure/tools/nrepl/middleware.clj#L19",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/cb7ce4140e8aa42736a90c59e2a50808a5c93b61/src/main/clojure/clojure/tools/nrepl/middleware.clj",
+   "https://github.com/clojure/tools.nrepl/raw/0679ab617d9f51ff9e2137411d181ab2825c784a/src/main/clojure/clojure/tools/nrepl/middleware.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware/set-descriptor!",
    :doc
