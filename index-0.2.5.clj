@@ -62,7 +62,7 @@
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
+   "https://github.com/clojure/tools.nrepl/blob/eb526fd8498ced1b4bd1555f8ff680f3ad65f1b4/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.session-api.html",
    :name "clojure.tools.nrepl.middleware.session",
@@ -480,9 +480,9 @@
    :name "add-stdin",
    :namespace "clojure.tools.nrepl.middleware.session",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L213",
+   "https://github.com/clojure/tools.nrepl/blob/eb526fd8498ced1b4bd1555f8ff680f3ad65f1b4/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L213",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
+   "https://github.com/clojure/tools.nrepl/raw/eb526fd8498ced1b4bd1555f8ff680f3ad65f1b4/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.session/add-stdin",
    :doc
@@ -494,9 +494,9 @@
    :name "session",
    :namespace "clojure.tools.nrepl.middleware.session",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L152",
+   "https://github.com/clojure/tools.nrepl/blob/eb526fd8498ced1b4bd1555f8ff680f3ad65f1b4/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L152",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/1c53a172a830f4dadbd7c326c3dccdd160f81f0f/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
+   "https://github.com/clojure/tools.nrepl/raw/eb526fd8498ced1b4bd1555f8ff680f3ad65f1b4/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.session/session",
    :doc
