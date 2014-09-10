@@ -41,7 +41,7 @@
    :name "clojure.tools.nrepl.middleware",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/f02956dc2975a04a92aa1188865f100b09eeeff0/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/blob/dee95905999b6d8df47a7a2367dc0100bcb0e1e9/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.interruptible-eval-api.html",
    :name "clojure.tools.nrepl.middleware.interruptible-eval",
@@ -373,10 +373,10 @@
   {:name "*eval*",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/f02956dc2975a04a92aa1188865f100b09eeeff0/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L18",
+   "https://github.com/clojure/tools.nrepl/blob/dee95905999b6d8df47a7a2367dc0100bcb0e1e9/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L18",
    :dynamic true,
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/f02956dc2975a04a92aa1188865f100b09eeeff0/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/dee95905999b6d8df47a7a2367dc0100bcb0e1e9/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/*eval*",
    :doc "Function returning the evaluation of its argument.",
@@ -387,10 +387,10 @@
   {:name "*msg*",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/f02956dc2975a04a92aa1188865f100b09eeeff0/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L14",
+   "https://github.com/clojure/tools.nrepl/blob/dee95905999b6d8df47a7a2367dc0100bcb0e1e9/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L14",
    :dynamic true,
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/f02956dc2975a04a92aa1188865f100b09eeeff0/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/dee95905999b6d8df47a7a2367dc0100bcb0e1e9/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/*msg*",
    :doc "The message currently being evaluated.",
@@ -403,15 +403,15 @@
    :name "evaluate",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/f02956dc2975a04a92aa1188865f100b09eeeff0/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L22",
+   "https://github.com/clojure/tools.nrepl/blob/dee95905999b6d8df47a7a2367dc0100bcb0e1e9/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L27",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/f02956dc2975a04a92aa1188865f100b09eeeff0/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/dee95905999b6d8df47a7a2367dc0100bcb0e1e9/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/evaluate",
    :doc
    "Evaluates some code within the dynamic context defined by a map of `bindings`,\nas per `clojure.core/get-thread-bindings`.\n\nUses `clojure.main/repl` to drive the evaluation of :code in a second\nmap argument (either a string or a seq of forms to be evaluated), which may\nalso optionally specify a :ns (resolved via `find-ns`).  The map MUST\ncontain a Transport implementation in :transport; expression results and errors\nwill be sent via that Transport.\n\nReturns the dynamic scope that remains after evaluating all expressions\nin :code.\n\nIt is assumed that `bindings` already contains useful/appropriate entries\nfor all vars indicated by `clojure.main/with-bindings`.",
    :var-type "function",
-   :line 22,
+   :line 27,
    :file
    "src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj"}
   {:arglists
@@ -419,15 +419,15 @@
    :name "interruptible-eval",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/f02956dc2975a04a92aa1188865f100b09eeeff0/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L162",
+   "https://github.com/clojure/tools.nrepl/blob/dee95905999b6d8df47a7a2367dc0100bcb0e1e9/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L167",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/f02956dc2975a04a92aa1188865f100b09eeeff0/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/dee95905999b6d8df47a7a2367dc0100bcb0e1e9/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/interruptible-eval",
    :doc
    "Evaluation middleware that supports interrupts.  Returns a handler that supports\n\"eval\" and \"interrupt\" :op-erations that delegates to the given handler\notherwise.",
    :var-type "function",
-   :line 162,
+   :line 167,
    :file
    "src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj"}
   {:arglists ([file file-path file-name]),
