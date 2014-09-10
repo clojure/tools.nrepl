@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>tools.nrepl</artifactId>
-    <version>0.2.6-SNAPSHOT</version>
+    <version>0.2.6</version>
     <name>nREPL</name>
 
     <parent>
@@ -23,7 +23,7 @@
         <connection>scm:git:git@github.com:clojure/tools.nrepl.git</connection>
         <developerConnection>scm:git:git@github.com:clojure/tools.nrepl.git</developerConnection>
         <url>git@github.com:clojure/tools.nrepl.git</url>
-      <tag>HEAD</tag>
+      <tag>tools.nrepl-0.2.6</tag>
   </scm>
 
     <properties>
