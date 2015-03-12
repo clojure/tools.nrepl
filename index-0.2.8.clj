@@ -35,7 +35,7 @@
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/85478572a6facabe0b0b4ac5b1cda5860773978a/src/main/clojure/clojure/tools/nrepl/middleware.clj",
+   "https://github.com/clojure/tools.nrepl/blob/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware-api.html",
    :name "clojure.tools.nrepl.middleware",
@@ -62,7 +62,7 @@
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/eb526fd8498ced1b4bd1555f8ff680f3ad65f1b4/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
+   "https://github.com/clojure/tools.nrepl/blob/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.session-api.html",
    :name "clojure.tools.nrepl.middleware.session",
@@ -360,9 +360,9 @@
    :name "set-descriptor!",
    :namespace "clojure.tools.nrepl.middleware",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/85478572a6facabe0b0b4ac5b1cda5860773978a/src/main/clojure/clojure/tools/nrepl/middleware.clj#L26",
+   "https://github.com/clojure/tools.nrepl/blob/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware.clj#L26",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/85478572a6facabe0b0b4ac5b1cda5860773978a/src/main/clojure/clojure/tools/nrepl/middleware.clj",
+   "https://github.com/clojure/tools.nrepl/raw/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware/set-descriptor!",
    :doc
@@ -480,23 +480,23 @@
    :name "add-stdin",
    :namespace "clojure.tools.nrepl.middleware.session",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/eb526fd8498ced1b4bd1555f8ff680f3ad65f1b4/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L213",
+   "https://github.com/clojure/tools.nrepl/blob/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L216",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/eb526fd8498ced1b4bd1555f8ff680f3ad65f1b4/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
+   "https://github.com/clojure/tools.nrepl/raw/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.session/add-stdin",
    :doc
    "stdin middleware.  Returns a handler that supports a \"stdin\" :op-eration, which\nadds content provided in a :stdin slot to the session's *in* Reader.  Delegates to\nthe given handler for other operations.\n\nRequires the session middleware.",
    :var-type "function",
-   :line 213,
+   :line 216,
    :file "src/main/clojure/clojure/tools/nrepl/middleware/session.clj"}
   {:arglists ([h]),
    :name "session",
    :namespace "clojure.tools.nrepl.middleware.session",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/eb526fd8498ced1b4bd1555f8ff680f3ad65f1b4/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L152",
+   "https://github.com/clojure/tools.nrepl/blob/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L152",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/eb526fd8498ced1b4bd1555f8ff680f3ad65f1b4/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
+   "https://github.com/clojure/tools.nrepl/raw/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.session/session",
    :doc
