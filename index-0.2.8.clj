@@ -41,14 +41,14 @@
    :name "clojure.tools.nrepl.middleware",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/b905245e089dd1d85e83996894ecf5c5b5563205/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/blob/1b62bd510c653b4addea1b85802c1246b0727c9e/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.interruptible-eval-api.html",
    :name "clojure.tools.nrepl.middleware.interruptible-eval",
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/11e3993746950640cb8173fbcd3b074c53b26ce0/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
+   "https://github.com/clojure/tools.nrepl/blob/ece146671692e801dbdb797b7be6fe0f86ccac80/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.load-file-api.html",
    :name "clojure.tools.nrepl.middleware.load-file",
@@ -373,10 +373,10 @@
   {:name "*eval*",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b905245e089dd1d85e83996894ecf5c5b5563205/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L18",
+   "https://github.com/clojure/tools.nrepl/blob/1b62bd510c653b4addea1b85802c1246b0727c9e/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L18",
    :dynamic true,
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b905245e089dd1d85e83996894ecf5c5b5563205/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1b62bd510c653b4addea1b85802c1246b0727c9e/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/*eval*",
    :doc "Function returning the evaluation of its argument.",
@@ -387,10 +387,10 @@
   {:name "*msg*",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b905245e089dd1d85e83996894ecf5c5b5563205/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L14",
+   "https://github.com/clojure/tools.nrepl/blob/1b62bd510c653b4addea1b85802c1246b0727c9e/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L14",
    :dynamic true,
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b905245e089dd1d85e83996894ecf5c5b5563205/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1b62bd510c653b4addea1b85802c1246b0727c9e/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/*msg*",
    :doc "The message currently being evaluated.",
@@ -403,9 +403,9 @@
    :name "evaluate",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b905245e089dd1d85e83996894ecf5c5b5563205/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L27",
+   "https://github.com/clojure/tools.nrepl/blob/1b62bd510c653b4addea1b85802c1246b0727c9e/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L27",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b905245e089dd1d85e83996894ecf5c5b5563205/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1b62bd510c653b4addea1b85802c1246b0727c9e/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/evaluate",
    :doc
@@ -419,9 +419,9 @@
    :name "interruptible-eval",
    :namespace "clojure.tools.nrepl.middleware.interruptible-eval",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b905245e089dd1d85e83996894ecf5c5b5563205/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L172",
+   "https://github.com/clojure/tools.nrepl/blob/1b62bd510c653b4addea1b85802c1246b0727c9e/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L172",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b905245e089dd1d85e83996894ecf5c5b5563205/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
+   "https://github.com/clojure/tools.nrepl/raw/1b62bd510c653b4addea1b85802c1246b0727c9e/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.interruptible-eval/interruptible-eval",
    :doc
@@ -434,31 +434,31 @@
    :name "load-file-code",
    :namespace "clojure.tools.nrepl.middleware.load-file",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/11e3993746950640cb8173fbcd3b074c53b26ce0/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj#L49",
+   "https://github.com/clojure/tools.nrepl/blob/ece146671692e801dbdb797b7be6fe0f86ccac80/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj#L51",
    :dynamic true,
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/11e3993746950640cb8173fbcd3b074c53b26ce0/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
+   "https://github.com/clojure/tools.nrepl/raw/ece146671692e801dbdb797b7be6fe0f86ccac80/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.load-file/load-file-code",
    :doc
    "Given the contents of a file, its _source-path-relative_ path,\nand its filename, returns a string of code containing a single\nexpression that, when evaluated, will load those contents with\nappropriate filename references and line numbers in metadata, etc.\n\nNote that because a single expression is produced, very large\nfile loads will fail due to the JVM method size limitation.\nIn such cases, see `load-large-file-code'`.",
    :var-type "function",
-   :line 49,
+   :line 51,
    :file
    "src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj"}
   {:arglists ([h]),
    :name "wrap-load-file",
    :namespace "clojure.tools.nrepl.middleware.load-file",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/11e3993746950640cb8173fbcd3b074c53b26ce0/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj#L67",
+   "https://github.com/clojure/tools.nrepl/blob/ece146671692e801dbdb797b7be6fe0f86ccac80/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj#L69",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/11e3993746950640cb8173fbcd3b074c53b26ce0/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
+   "https://github.com/clojure/tools.nrepl/raw/ece146671692e801dbdb797b7be6fe0f86ccac80/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.load-file/wrap-load-file",
    :doc
    "Middleware that evaluates a file's contents, as per load-file,\nbut with all data supplied in the sent message (i.e. safe for use\nwith remote REPL environments).\n\nThis middleware depends on the availability of an :op \"eval\"\nmiddleware below it (such as interruptible-eval).",
    :var-type "function",
-   :line 67,
+   :line 69,
    :file
    "src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj"}
   {:arglists ([h]),
