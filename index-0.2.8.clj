@@ -77,7 +77,7 @@
    :doc
    "Misc utilities used in nREPL's implementation (potentially also useful\nfor anyone extending it)."}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.server-api.html",
    :name "clojure.tools.nrepl.server",
@@ -549,9 +549,9 @@
    :name "->Server",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj#L101",
+   "https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L101",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/->Server",
    :doc
@@ -563,9 +563,9 @@
    :name "default-handler",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj#L80",
+   "https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L80",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/default-handler",
    :doc
@@ -577,9 +577,9 @@
    :name "handle",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj#L23",
+   "https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L23",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/handle",
    :doc
@@ -591,9 +591,9 @@
    :name "map->Server",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj#L101",
+   "https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L101",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/map->Server",
    :doc
@@ -608,13 +608,13 @@
    :name "start-server",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj#L121",
+   "https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L121",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/start-server",
    :doc
-   "Starts a socket-based nREPL server.  Configuration options include:\n\n  * :port — defaults to 0, which autoselects an open port on localhost\n  * :bind — bind address, by default any (0.0.0.0)\n  * :handler — the nREPL message handler to use for each incoming connection;\n      defaults to the result of `(default-handler)`\n  * :transport-fn — a function that, given a java.net.Socket corresponding\n      to an incoming connection, will return an value satisfying the\n      clojure.tools.nrepl.Transport protocol for that Socket.\n  * :ack-port — if specified, the port of an already-running server\n      that will be connected to to inform of the new server's port.\n      Useful only by Clojure tooling implementations.\n\n  Returns a (map) handle to the server that is started, which may be stopped\n  either via `stop-server`, (.close server), or automatically via `with-open`.\n  The port that the server is open on is available in the :port slot of the\n  server map (useful if the :port option is 0 or was left unspecified.",
+   "Starts a socket-based nREPL server.  Configuration options include:\n\n  * :port — defaults to 0, which autoselects an open port on localhost\n  * :bind — bind address, by default \"localhost\")\n  * :handler — the nREPL message handler to use for each incoming connection;\n      defaults to the result of `(default-handler)`\n  * :transport-fn — a function that, given a java.net.Socket corresponding\n      to an incoming connection, will return an value satisfying the\n      clojure.tools.nrepl.Transport protocol for that Socket.\n  * :ack-port — if specified, the port of an already-running server\n      that will be connected to to inform of the new server's port.\n      Useful only by Clojure tooling implementations.\n\n  Returns a (map) handle to the server that is started, which may be stopped\n  either via `stop-server`, (.close server), or automatically via `with-open`.\n  The port that the server is open on is available in the :port slot of the\n  server map (useful if the :port option is 0 or was left unspecified.",
    :var-type "function",
    :line 121,
    :file "src/main/clojure/clojure/tools/nrepl/server.clj"}
@@ -622,9 +622,9 @@
    :name "stop-server",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj#L53",
+   "https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L53",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/stop-server",
    :doc "Stops a server started via `start-server`.",
@@ -635,9 +635,9 @@
    :name "unknown-op",
    :namespace "clojure.tools.nrepl.server",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj#L68",
+   "https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L68",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/b67830799d58919da3f193126b6c6d20ab4642c0/src/main/clojure/clojure/tools/nrepl/server.clj",
+   "https://github.com/clojure/tools.nrepl/raw/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.server/unknown-op",
    :doc "Sends an :unknown-op :error for the given message.",
