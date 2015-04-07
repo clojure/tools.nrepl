@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>clojure.tools.nrepl - Network REPL 0.2.9 API documentation</title>
+    <title>clojure.tools.nrepl - Network REPL 0.2.11 API documentation</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -25,7 +25,7 @@ namespace.
       <div id="leftcolumn"><div style="text-align: center;"></div>
 <div class="menu">
   <div class="WikiCustomNav WikiElement wiki">
-    <span class="toc-header"><span id="project-name">Network REPL</span> <span id="version">0.2.9</span> API</span><br />
+    <span class="toc-header"><span id="project-name">Network REPL</span> <span id="version">0.2.11</span> API</span><br />
     <ul>
       <li><a class="wiki_link" href="index.html">Overview</a></li>
       <li><a class="wiki_link" href="api-index.html">API Index</a></li>
@@ -143,6 +143,9 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware.interruptible-eval/interruptible-eval">interruptible-eval</a>
       
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.tools.nrepl.middleware.interruptible-eval/queue-eval">queue-eval</a>
+      
     </div>
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#clojure.tools.nrepl.middleware.load-file" style="margin-top: 3px;">clojure.tools.nrepl.middleware.load-file</a>
@@ -248,7 +251,7 @@ namespace.
 </div>
 </div>
                 <div id="content-tag"><h1 id="overview">API for <span id="clojure.tools.nrepl">clojure.tools.nrepl</span>
-  - <span id="header-project">Network REPL</span> <span id="header-version">0.2.9</span><span id="header-status-block"> (<span id="header-status">in development</span>)</span>
+  - <span id="header-project">Network REPL</span> <span id="header-version">0.2.11</span><span id="header-status-block"> (<span id="header-status">in development</span>)</span>
   </h1>
 <span id="author-line">by <span id="author-name">Chas Emerick</span><br /></span>
 <br />Full namespace name: <span id="long-name">clojure.tools.nrepl</span>
@@ -658,7 +661,7 @@ fully-qualified name as the descriptor's "implemented-by" value.</pre>
     <pre id="var-docstr">Function returning the evaluation of its argument.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/1b62bd510c653b4addea1b85802c1246b0727c9e/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L18" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/3e06bf73d556aad22ad9ec06efd88771c6f06ff2/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L18" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -668,7 +671,7 @@ fully-qualified name as the descriptor's "implemented-by" value.</pre>
     <pre id="var-docstr">The message currently being evaluated.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/1b62bd510c653b4addea1b85802c1246b0727c9e/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L14" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/3e06bf73d556aad22ad9ec06efd88771c6f06ff2/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L14" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -692,20 +695,31 @@ It is assumed that `bindings` already contains useful/appropriate entries
 for all vars indicated by `clojure.main/with-bindings`.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/1b62bd510c653b4addea1b85802c1246b0727c9e/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L27" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/3e06bf73d556aad22ad9ec06efd88771c6f06ff2/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L27" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
     <h2 id="clojure.tools.nrepl.middleware.interruptible-eval/interruptible-eval">interruptible-eval</h2>
     <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (interruptible-eval h &amp; {:keys [executor], :or {executor (configure-executor)}})
+    <pre id="var-usage">Usage: (interruptible-eval h &amp; configuration)
 </pre>
     <pre id="var-docstr">Evaluation middleware that supports interrupts.  Returns a handler that supports
 "eval" and "interrupt" :op-erations that delegates to the given handler
 otherwise.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/1b62bd510c653b4addea1b85802c1246b0727c9e/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L172" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/3e06bf73d556aad22ad9ec06efd88771c6f06ff2/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L174" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.tools.nrepl.middleware.interruptible-eval/queue-eval">queue-eval</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (queue-eval session executor f)
+</pre>
+    <pre id="var-docstr">Queues the function for the given session.</pre>
+    
+    
+    <a href="https://github.com/clojure/tools.nrepl/blob/3e06bf73d556aad22ad9ec06efd88771c6f06ff2/src/main/clojure/clojure/tools/nrepl/middleware/interruptible_eval.clj#L163" id="var-source">Source</a>
   </div>
 </div>
 <br />
@@ -778,10 +792,15 @@ in messages sent via the request's Transport to strings via `pr`,
 delegating all actual message handling to the provided handler.
 
 Requires that results of eval operations are sent in messages in a
-:value slot.</pre>
+:value slot.
+
+If :value is already a string, and a sent message's :printed-value
+slot contains any truthy value, then :value will not be re-printed.
+This allows evaluation contexts to produce printed results in :value
+if they so choose, and opt out of the printing here.</pre>
     
     
-    <a href="https://github.com/clojure/tools.nrepl/blob/bbc5e02b665356e7dc33fe1d78346f17b3dec452/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj#L8" id="var-source">Source</a>
+    <a href="https://github.com/clojure/tools.nrepl/blob/d1613c99a07a64b55fbaed5806596463c1ad2f53/src/main/clojure/clojure/tools/nrepl/middleware/pr_values.clj#L8" id="var-source">Source</a>
   </div>
 </div>
 <br />
