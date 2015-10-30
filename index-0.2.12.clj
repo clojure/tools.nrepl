@@ -48,7 +48,7 @@
    :author "Chas Emerick",
    :doc nil}
   {:source-url
-   "https://github.com/clojure/tools.nrepl/blob/96505d8b29dd2d609ce8039c8c6a06ca5c243d7a/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
+   "https://github.com/clojure/tools.nrepl/blob/2263b6b019aa75462a42cc765357f2cecff5ef23/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl/clojure.tools.nrepl.middleware.load-file-api.html",
    :name "clojure.tools.nrepl.middleware.load-file",
@@ -449,10 +449,10 @@
    :name "load-file-code",
    :namespace "clojure.tools.nrepl.middleware.load-file",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/96505d8b29dd2d609ce8039c8c6a06ca5c243d7a/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj#L51",
+   "https://github.com/clojure/tools.nrepl/blob/2263b6b019aa75462a42cc765357f2cecff5ef23/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj#L51",
    :dynamic true,
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/96505d8b29dd2d609ce8039c8c6a06ca5c243d7a/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
+   "https://github.com/clojure/tools.nrepl/raw/2263b6b019aa75462a42cc765357f2cecff5ef23/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.load-file/load-file-code",
    :doc
@@ -465,9 +465,9 @@
    :name "wrap-load-file",
    :namespace "clojure.tools.nrepl.middleware.load-file",
    :source-url
-   "https://github.com/clojure/tools.nrepl/blob/96505d8b29dd2d609ce8039c8c6a06ca5c243d7a/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj#L69",
+   "https://github.com/clojure/tools.nrepl/blob/2263b6b019aa75462a42cc765357f2cecff5ef23/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj#L69",
    :raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/96505d8b29dd2d609ce8039c8c6a06ca5c243d7a/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
+   "https://github.com/clojure/tools.nrepl/raw/2263b6b019aa75462a42cc765357f2cecff5ef23/src/main/clojure/clojure/tools/nrepl/middleware/load_file.clj",
    :wiki-url
    "http://clojure.github.com/tools.nrepl//clojure.tools.nrepl-api.html#clojure.tools.nrepl.middleware.load-file/wrap-load-file",
    :doc
