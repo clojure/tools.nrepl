@@ -13,7 +13,7 @@ nREPL is available in Maven central. Add this to your Leiningen
 `project.clj` `:dependencies`:
 
 ```clojure
-[org.clojure/tools.nrepl "0.2.11"]
+[org.clojure/tools.nrepl "0.2.12"]
 ```
 
 Or, add this to your Maven project's `pom.xml`:
