@@ -167,13 +167,7 @@ namespace.
     </div>
   </div><div class="toc-section" style="margin-left: 1em;">
     <a style="margin-top: 3px;" href="#clojure.tools.nrepl.middleware.session">clojure.tools.nrepl.middleware.session</a>
-    <div class="toc-entry" style="margin-left: 1em;">
-      <a href="#clojure.tools.nrepl.middleware.session/add-stdin" class="toc-entry-anchor">add-stdin</a>
-      
-    </div><div class="toc-entry" style="margin-left: 1em;">
-      <a href="#clojure.tools.nrepl.middleware.session/session" class="toc-entry-anchor">session</a>
-      
-    </div>
+    
   </div><div class="toc-section" style="margin-left: 1em;">
     <a style="margin-top: 3px;" href="#clojure.tools.nrepl.misc">clojure.tools.nrepl.misc</a>
     <div class="toc-entry" style="margin-left: 1em;">
@@ -189,22 +183,7 @@ namespace.
   </div><div class="toc-section" style="margin-left: 1em;">
     <a style="margin-top: 3px;" href="#clojure.tools.nrepl.server">clojure.tools.nrepl.server</a>
     <div class="toc-entry" style="margin-left: 1em;">
-      <a href="#clojure.tools.nrepl.server/Server" class="toc-entry-anchor">Server</a>
-      
-    </div><div class="toc-entry" style="margin-left: 1em;">
-      <a href="#clojure.tools.nrepl.server/-&gt;Server" class="toc-entry-anchor">-&gt;Server</a>
-      
-    </div><div class="toc-entry" style="margin-left: 1em;">
-      <a href="#clojure.tools.nrepl.server/default-handler" class="toc-entry-anchor">default-handler</a>
-      
-    </div><div class="toc-entry" style="margin-left: 1em;">
       <a href="#clojure.tools.nrepl.server/handle" class="toc-entry-anchor">handle</a>
-      
-    </div><div class="toc-entry" style="margin-left: 1em;">
-      <a href="#clojure.tools.nrepl.server/map-&gt;Server" class="toc-entry-anchor">map-&gt;Server</a>
-      
-    </div><div class="toc-entry" style="margin-left: 1em;">
-      <a href="#clojure.tools.nrepl.server/start-server" class="toc-entry-anchor">start-server</a>
       
     </div><div class="toc-entry" style="margin-left: 1em;">
       <a href="#clojure.tools.nrepl.server/stop-server" class="toc-entry-anchor">stop-server</a>
@@ -851,59 +830,7 @@ if they so choose, and opt out of the printing here.</pre>
 <br />
 
 
-<div id="var-section">
-  <p></p>
-  <h2>Public Variables and Functions</h2>
-  <div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.tools.nrepl.middleware.session/add-stdin">add-stdin</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (add-stdin h)
-</pre>
-    <pre id="var-docstr">stdin middleware.  Returns a handler that supports a "stdin" :op-eration, which
-adds content provided in a :stdin slot to the session's *in* Reader.  Delegates to
-the given handler for other operations.
 
-Requires the session middleware.</pre>
-    <pre id="var-specs"></pre>
-    
-    
-    <a id="var-source" href="https://github.com/clojure/tools.nrepl/blob/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L216">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.tools.nrepl.middleware.session/session">session</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (session h)
-</pre>
-    <pre id="var-docstr">Session middleware.  Returns a handler which supports these :op-erations:
-
-* "ls-sessions", which results in a response message
-  containing a list of the IDs of the currently-retained sessions in a
-  :session slot.
-* "close", which drops the session indicated by the
-  ID in the :session slot.  The response message's :status will include
-  :session-closed.
-* "clone", which will cause a new session to be retained.  The ID of this
-  new session will be returned in a response message in a :new-session
-  slot.  The new session's state (dynamic scope, etc) will be a copy of
-  the state of the session identified in the :session slot of the request.
-
-Messages indicating other operations are delegated to the given handler,
-with the session identified by the :session ID added to the message. If
-no :session ID is found, a new session is created (which will only
-persist for the duration of the handling of the given message).
-
-Requires the interruptible-eval middleware (specifically, its binding of
-*msg* to the currently-evaluated message so that session-specific *out*
-and *err* content can be associated with the originating message).</pre>
-    <pre id="var-specs"></pre>
-    
-    
-    <a id="var-source" href="https://github.com/clojure/tools.nrepl/blob/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L152">Source</a>
-  </div>
-</div>
 
 <br />
 <h2 id="clojure.tools.nrepl.misc">clojure.tools.nrepl.misc</h2>
@@ -972,53 +899,11 @@ or a string.</pre>
 
 <br />
 
-<div id="type-section">
-  <p></p>
-  <h2>Types</h2>
-  <div id="type-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.tools.nrepl.server/Server">Server</h2>
-    <span id="type-type">record</span><br />
-    <pre id="type-docstr"></pre>
-    Fields: <span id="type-fields">[server-socket port open-transports transport greeting handler]</span><br />
-    Protocols: <span id="type-protocols"></span><br />
-    Interfaces: <span id="type-interfaces">clojure.lang.IDeref, clojure.lang.IHashEq, clojure.lang.IKeywordLookup, clojure.lang.ILookup, clojure.lang.IObj, clojure.lang.IPersistentMap, java.io.Closeable, java.io.Serializable, java.util.Map</span><br />
-  </div>
-</div>
+
 <div id="var-section">
   <p></p>
   <h2>Public Variables and Functions</h2>
   <div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.tools.nrepl.server/-&gt;Server">-&gt;Server</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (-&gt;Server server-socket port open-transports transport greeting handler)
-</pre>
-    <pre id="var-docstr">Positional factory function for class clojure.tools.nrepl.server.Server.</pre>
-    <pre id="var-specs"></pre>
-    
-    
-    <a id="var-source" href="https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L101">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.tools.nrepl.server/default-handler">default-handler</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (default-handler &amp; additional-middlewares)
-</pre>
-    <pre id="var-docstr">A default handler supporting interruptible evaluation, stdin, sessions, and
-readable representations of evaluated expressions via `pr`.
-
-Additional middlewares to mix into the default stack may be provided; these
-should all be values (usually vars) that have an nREPL middleware descriptor
-in their metadata (see clojure.tools.nrepl.middleware/set-descriptor!).</pre>
-    <pre id="var-specs"></pre>
-    
-    
-    <a id="var-source" href="https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L80">Source</a>
-  </div><div id="var-entry">
     <br />
     <hr />
     <h2 id="clojure.tools.nrepl.server/handle">handle</h2>
@@ -1031,46 +916,6 @@ Returns nil when [recv] returns nil for the given transport.</pre>
     
     
     <a id="var-source" href="https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L23">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.tools.nrepl.server/map-&gt;Server">map-&gt;Server</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (map-&gt;Server m#)
-</pre>
-    <pre id="var-docstr">Factory function for class clojure.tools.nrepl.server.Server, taking a map of keywords to field values.</pre>
-    <pre id="var-specs"></pre>
-    
-    
-    <a id="var-source" href="https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L101">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.tools.nrepl.server/start-server">start-server</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (start-server &amp; {:keys [port bind transport-fn handler ack-port greeting-fn], :or {port 0}})
-</pre>
-    <pre id="var-docstr">Starts a socket-based nREPL server.  Configuration options include:
-
-  * :port — defaults to 0, which autoselects an open port on localhost
-  * :bind — bind address, by default "localhost")
-  * :handler — the nREPL message handler to use for each incoming connection;
-      defaults to the result of `(default-handler)`
-  * :transport-fn — a function that, given a java.net.Socket corresponding
-      to an incoming connection, will return an value satisfying the
-      clojure.tools.nrepl.Transport protocol for that Socket.
-  * :ack-port — if specified, the port of an already-running server
-      that will be connected to to inform of the new server's port.
-      Useful only by Clojure tooling implementations.
-
-  Returns a (map) handle to the server that is started, which may be stopped
-  either via `stop-server`, (.close server), or automatically via `with-open`.
-  The port that the server is open on is available in the :port slot of the
-  server map (useful if the :port option is 0 or was left unspecified.</pre>
-    <pre id="var-specs"></pre>
-    
-    
-    <a id="var-source" href="https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L121">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -1277,7 +1122,7 @@ to the server, but telnet et al. isn't that.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div id="copyright" style="text-align: center;">Copyright 2007-2016 by Rich Hickey and the various contributors</div>
+	  <div id="copyright" style="text-align: center;">Copyright 2007-2017 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a href="http://www.tomhickey.com" title="Visit Tom Hickey's website.">Tom Hickey</a>.<br />

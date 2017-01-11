@@ -496,34 +496,6 @@
    :wiki-url
    "http://clojure.github.io/tools.nrepl//index.html#clojure.tools.nrepl.middleware.pr-values/pr-values"}
   {:raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
-   :name "add-stdin",
-   :file "src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L216",
-   :line 216,
-   :var-type "function",
-   :arglists ([h]),
-   :doc
-   "stdin middleware.  Returns a handler that supports a \"stdin\" :op-eration, which\nadds content provided in a :stdin slot to the session's *in* Reader.  Delegates to\nthe given handler for other operations.\n\nRequires the session middleware.",
-   :namespace "clojure.tools.nrepl.middleware.session",
-   :wiki-url
-   "http://clojure.github.io/tools.nrepl//index.html#clojure.tools.nrepl.middleware.session/add-stdin"}
-  {:raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
-   :name "session",
-   :file "src/main/clojure/clojure/tools/nrepl/middleware/session.clj",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/f95f2be94c2e43e61f8b7464978216787194490d/src/main/clojure/clojure/tools/nrepl/middleware/session.clj#L152",
-   :line 152,
-   :var-type "function",
-   :arglists ([h]),
-   :doc
-   "Session middleware.  Returns a handler which supports these :op-erations:\n\n* \"ls-sessions\", which results in a response message\n  containing a list of the IDs of the currently-retained sessions in a\n  :session slot.\n* \"close\", which drops the session indicated by the\n  ID in the :session slot.  The response message's :status will include\n  :session-closed.\n* \"clone\", which will cause a new session to be retained.  The ID of this\n  new session will be returned in a response message in a :new-session\n  slot.  The new session's state (dynamic scope, etc) will be a copy of\n  the state of the session identified in the :session slot of the request.\n\nMessages indicating other operations are delegated to the given handler,\nwith the session identified by the :session ID added to the message. If\nno :session ID is found, a new session is created (which will only\npersist for the duration of the handling of the given message).\n\nRequires the interruptible-eval middleware (specifically, its binding of\n*msg* to the currently-evaluated message so that session-specific *out*\nand *err* content can be associated with the originating message).",
-   :namespace "clojure.tools.nrepl.middleware.session",
-   :wiki-url
-   "http://clojure.github.io/tools.nrepl//index.html#clojure.tools.nrepl.middleware.session/session"}
-  {:raw-source-url
    "https://github.com/clojure/tools.nrepl/raw/ac95dc7da973f3d7edea75d0f6f9ce01ee18641d/src/main/clojure/clojure/tools/nrepl/misc.clj",
    :name "response-for",
    :file "src/main/clojure/clojure/tools/nrepl/misc.clj",
@@ -565,35 +537,6 @@
    "http://clojure.github.io/tools.nrepl//index.html#clojure.tools.nrepl.misc/uuid"}
   {:raw-source-url
    "https://github.com/clojure/tools.nrepl/raw/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
-   :name "->Server",
-   :file "src/main/clojure/clojure/tools/nrepl/server.clj",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L101",
-   :line 101,
-   :var-type "function",
-   :arglists
-   ([server-socket port open-transports transport greeting handler]),
-   :doc
-   "Positional factory function for class clojure.tools.nrepl.server.Server.",
-   :namespace "clojure.tools.nrepl.server",
-   :wiki-url
-   "http://clojure.github.io/tools.nrepl//index.html#clojure.tools.nrepl.server/->Server"}
-  {:raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
-   :name "default-handler",
-   :file "src/main/clojure/clojure/tools/nrepl/server.clj",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L80",
-   :line 80,
-   :var-type "function",
-   :arglists ([& additional-middlewares]),
-   :doc
-   "A default handler supporting interruptible evaluation, stdin, sessions, and\nreadable representations of evaluated expressions via `pr`.\n\nAdditional middlewares to mix into the default stack may be provided; these\nshould all be values (usually vars) that have an nREPL middleware descriptor\nin their metadata (see clojure.tools.nrepl.middleware/set-descriptor!).",
-   :namespace "clojure.tools.nrepl.server",
-   :wiki-url
-   "http://clojure.github.io/tools.nrepl//index.html#clojure.tools.nrepl.server/default-handler"}
-  {:raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
    :name "handle",
    :file "src/main/clojure/clojure/tools/nrepl/server.clj",
    :source-url
@@ -606,37 +549,6 @@
    :namespace "clojure.tools.nrepl.server",
    :wiki-url
    "http://clojure.github.io/tools.nrepl//index.html#clojure.tools.nrepl.server/handle"}
-  {:raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
-   :name "map->Server",
-   :file "src/main/clojure/clojure/tools/nrepl/server.clj",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L101",
-   :line 101,
-   :var-type "function",
-   :arglists ([m#]),
-   :doc
-   "Factory function for class clojure.tools.nrepl.server.Server, taking a map of keywords to field values.",
-   :namespace "clojure.tools.nrepl.server",
-   :wiki-url
-   "http://clojure.github.io/tools.nrepl//index.html#clojure.tools.nrepl.server/map->Server"}
-  {:raw-source-url
-   "https://github.com/clojure/tools.nrepl/raw/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
-   :name "start-server",
-   :file "src/main/clojure/clojure/tools/nrepl/server.clj",
-   :source-url
-   "https://github.com/clojure/tools.nrepl/blob/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj#L121",
-   :line 121,
-   :var-type "function",
-   :arglists
-   ([&
-     {:keys [port bind transport-fn handler ack-port greeting-fn],
-      :or {port 0}}]),
-   :doc
-   "Starts a socket-based nREPL server.  Configuration options include:\n\n  * :port — defaults to 0, which autoselects an open port on localhost\n  * :bind — bind address, by default \"localhost\")\n  * :handler — the nREPL message handler to use for each incoming connection;\n      defaults to the result of `(default-handler)`\n  * :transport-fn — a function that, given a java.net.Socket corresponding\n      to an incoming connection, will return an value satisfying the\n      clojure.tools.nrepl.Transport protocol for that Socket.\n  * :ack-port — if specified, the port of an already-running server\n      that will be connected to to inform of the new server's port.\n      Useful only by Clojure tooling implementations.\n\n  Returns a (map) handle to the server that is started, which may be stopped\n  either via `stop-server`, (.close server), or automatically via `with-open`.\n  The port that the server is open on is available in the :port slot of the\n  server map (useful if the :port option is 0 or was left unspecified.",
-   :namespace "clojure.tools.nrepl.server",
-   :wiki-url
-   "http://clojure.github.io/tools.nrepl//index.html#clojure.tools.nrepl.server/start-server"}
   {:raw-source-url
    "https://github.com/clojure/tools.nrepl/raw/db9125c566f0ada9284cbc6ea01fd59edfcd2ad3/src/main/clojure/clojure/tools/nrepl/server.clj",
    :name "stop-server",
@@ -663,15 +575,6 @@
    :namespace "clojure.tools.nrepl.server",
    :wiki-url
    "http://clojure.github.io/tools.nrepl//index.html#clojure.tools.nrepl.server/unknown-op"}
-  {:name "Server",
-   :var-type "record",
-   :namespace "clojure.tools.nrepl.server",
-   :arglists nil,
-   :wiki-url
-   "http://clojure.github.io/tools.nrepl//index.html#clojure.tools.nrepl.server/Server",
-   :source-url nil,
-   :raw-source-url nil,
-   :file nil}
   {:raw-source-url
    "https://github.com/clojure/tools.nrepl/raw/20a3d1508beaa86e784610fdd7d962555b2faafb/src/main/clojure/clojure/tools/nrepl/transport.clj",
    :name "->FnTransport",
