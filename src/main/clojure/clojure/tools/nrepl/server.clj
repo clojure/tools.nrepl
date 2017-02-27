@@ -139,7 +139,7 @@
   [& {:keys [port bind transport-fn handler ack-port greeting-fn] :or {port 0}}]
   (let [bind-addr (if bind
                     (InetSocketAddress. ^String bind ^Integer port)
-                    (InetSocketAddress. "localhost" port))
+                    (InetSocketAddress. "::" port))
         ss (doto (ServerSocket.)
              (.setReuseAddress true)
              (.bind bind-addr))
