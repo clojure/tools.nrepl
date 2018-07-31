@@ -62,6 +62,7 @@ client/tool.  Tools that support nREPL include:
   support for vim)
 * [Reply](https://github.com/trptcolin/reply/)
 * [Atom](https://atom.io/packages/search?q=nrepl)
+* [clojupyter](https://github.com/roryk/clojupyter) (Jupyter notebooks for Clojure)
 
 If your preferred Clojure development environment supports nREPL, you're done.
 Use it or connect to an existing nREPL endpoint, and you're done.
