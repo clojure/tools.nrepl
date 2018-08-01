@@ -1,5 +1,7 @@
 # nREPL
 
+**The project's development moved over to a [new repository](http://github.com/nrepl/nrepl) after version 0.2.13**
+
 [nREPL](http://github.com/clojure/tools.nrepl) is a Clojure *n*etwork REPL that
 provides a REPL server and client, along with some common APIs
 of use to IDEs and other tools that may need to evaluate Clojure
