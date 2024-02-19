@@ -7,13 +7,13 @@
     <parent>
         <groupId>org.clojure</groupId>
         <artifactId>pom.contrib</artifactId>
-        <version>0.2.2</version>
+        <version>1.2.0</version>
     </parent>
 
     <developers>
         <developer>
             <name>Chas Emerick</name>
-            <url>http://cemerick.com</url>
+            <url>https://cemerick.com</url>
             <email>cemerick@snowtide.com</email>
             <timezone>-5</timezone>
         </developer>
@@ -27,7 +27,7 @@
   </scm>
 
     <properties>
-        <clojure.version>1.2.0</clojure.version>
+        <clojure.version>1.9.0</clojure.version>
         <clojure.warnOnReflection>true</clojure.warnOnReflection>
     </properties>
 
@@ -35,7 +35,7 @@
       <dependency>
         <groupId>org.clojure</groupId>
         <artifactId>tools.logging</artifactId>
-        <version>0.2.3</version>
+        <version>1.3.0</version>
         <optional>true</optional>
       </dependency>
     </dependencies>
