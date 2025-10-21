@@ -3,6 +3,7 @@
     <artifactId>tools.nrepl</artifactId>
     <version>0.2.14-SNAPSHOT</version>
     <name>tools.nrepl</name>
+	<description>A Clojure network REPL that provides a server and client.</description>
 
     <parent>
         <groupId>org.clojure</groupId>
